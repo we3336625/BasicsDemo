@@ -10,38 +10,33 @@
         style="@style/common_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/phone"
-        />
+        android:text="@string/username"/>
 
     <EditText
-        android:id="@+id/et_sendsms_phone"
+        android:id="@+id/et_filestore_username"
         style="@style/common_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:inputType="number"
+        />
 
     <TextView
         style="@style/common_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/content"
-        />
+        android:text="@string/pwd"/>
 
     <EditText
-        android:id="@+id/et_sendsms_content"
+        android:id="@+id/et_filestore_pwd"
         style="@style/common_edittext"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_200_dip"
-        android:background="@android:drawable/alert_light_frame"
-        android:gravity="top"
-        />
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/btn_sendsms_send"
+        android:id="@+id/btn_filestore_login"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_10_dip"
-        android:text="@string/send"
-        android:textSize="@dimen/common_text_size20"
-        />
+        android:text="@string/login"/>
 </LinearLayout>

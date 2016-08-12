@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <include layout="@layout/title_bar"/>
 
     <TextView
+        style="@style/common_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/phonenumber"/>
 
     <EditText
         android:id="@+id/telephone_et_number"
+        style="@style/common_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -21,9 +23,9 @@
 
     <Button
         android:id="@+id/telephone_btn_call"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/call"/>
 
 </LinearLayout>

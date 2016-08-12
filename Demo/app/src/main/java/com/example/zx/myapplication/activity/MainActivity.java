@@ -1,6 +1,5 @@
 package com.example.zx.myapplication.activity;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,22 +12,24 @@ import com.example.zx.myapplication.R;
  */
 public class MainActivity extends BaseActivity {
 
-	private Button mBtnCalculator;
+	public static final String TAG = "MainActivity";
+
 	private Button mBtnSQLite;
 	private Button mBtnImageSelector;
 	private Button mBtnTelephonoe;
 	private Button mBtnSendSMS;
+	private Button mBtnFileStore;
 
 	@Override
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.main);
 		initTitleButton();
-		mBtnCalculator = (Button) findViewById(R.id.main_calculator);
 		mBtnSQLite = (Button) findViewById(R.id.main_sqlite);
 		mBtnImageSelector = (Button) findViewById(R.id.main_imageselector);
 		mBtnTelephonoe = (Button) findViewById(R.id.main_telephone);
 		mBtnSendSMS = (Button) findViewById(R.id.main_sendsms);
+		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
 	}
 
 	private void initTitleButton() {
@@ -44,20 +45,17 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void setupListeners() {
 		super.setupListeners();
-		mBtnCalculator.setOnClickListener(this);
 		mBtnSQLite.setOnClickListener(this);
 		mBtnImageSelector.setOnClickListener(this);
 		mBtnTelephonoe.setOnClickListener(this);
 		mBtnSendSMS.setOnClickListener(this);
+		mBtnFileStore.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View view) {
 		super.onClick(view);
 		switch (view.getId()) {
-			case R.id.main_calculator:
-				startNextActivity(CalculatorActivity.class);
-				break;
 			case R.id.main_sqlite:
 				startNextActivity(SQLiteActivity.class);
 				break;
@@ -69,6 +67,10 @@ public class MainActivity extends BaseActivity {
 				break;
 			case R.id.main_sendsms:
 				startNextActivity(SendSMSActivity.class);
+				break;
+			case R.id.main_filestore:
+				startNextActivity(FileStoreActivity.class);
+				break;
 			default:
 				break;
 		}

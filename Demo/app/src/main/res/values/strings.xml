@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Application</string>
+    <string name="app_name">测试demo</string>
 
-    <!-- imageselector -->
+    <!-- 图片选择器 -->
     <string name="image_selecor_title">图片选择器</string>
 
     <!-- SQLite -->
@@ -13,47 +13,32 @@
     <string name="delete">删除数据</string>
     <string name="sql_title">SQLite测试</string>
 
-    <!-- Calculator -->
-    <string name="zero">0</string>
-    <string name="one">1</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="point">.</string>
-    <string name="plus">+</string>
-    <string name="minus">-</string>
-    <string name="multiply">×</string>
-    <string name="devide">/</string>
-    <string name="equal">=</string>
-    <string name="clear">C</string>
-    <string name="calculator_title">计算器(未完善)</string>
-
-    <!-- main -->
-    <string name="calculator">Calculator</string>
+    <!-- mainactivity -->
     <string name="sqlite">SQLite</string>
-    <string name="imageselector">ImageSelector</string>
+    <string name="imageselector">图片选择器</string>
     <string name="main">主界面</string>
 
-    <!-- telephone -->
-    <string name="telephone">telephone</string>
+    <!-- 打电话 -->
+    <string name="telephone">打电话</string>
     <string name="phonenumber">请输入拨打的电话</string>
     <string name="call">拨打电话</string>
     <string name="numberisnull">号码为空</string>
     <string name="tele_title">打电话</string>
-    
-    <!-- sendSMS -->
-    <string name="sendsms">sendSMS</string>
+
+    <!-- 发送短信 -->
+    <string name="sendsms">发送短信</string>
     <string name="phone">号码</string>
     <string name="content">内容</string>
     <string name="send">发送</string>
     <string name="send_success">发送成功</string>
     <string name="number_is_wrong">号码输入有误</string>
     <string name="content_is_null"> 消息内容为空</string>
-    
+
+    <!-- 文件存储 -->
+    <string name="filestore">文件存储</string>
+    <string name="username">用户名</string>
+    <string name="pwd">密码</string>
+    <string name="login">登录</string>
+
     <string name="text_back">返回</string>
 </resources>
