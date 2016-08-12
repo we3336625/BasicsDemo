@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-    <include layout="@layout/title_bar" />
-
-    <Button
-        android:id="@+id/main_calculator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/main_button"
-        android:text="@string/calculator"/>
+    <include layout="@layout/title_bar"/>
 
     <Button
         android:id="@+id/main_sqlite"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/sqlite"/>
 
     <Button
         android:id="@+id/main_imageselector"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/imageselector"/>
 
     <Button
         android:id="@+id/main_telephone"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/telephone"/>
 
     <Button
         android:id="@+id/main_sendsms"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/sendsms"/>
+
+    <Button
+        android:id="@+id/main_filestore"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filestore"/>
 </LinearLayout>

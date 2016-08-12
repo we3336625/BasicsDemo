@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <include layout="@layout/title_bar"/>
 
     <Button
         android:id="@+id/sql_create_database"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/create_database"/>
+
     <Button
         android:id="@+id/sql_update_database"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/update_database"/>
+
     <Button
         android:id="@+id/sql_insert"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/insert"/>
+
     <Button
         android:id="@+id/sql_update"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/update"/>
+
     <Button
         android:id="@+id/sql_query"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/query"/>
+
     <Button
         android:id="@+id/sql_delete"
+        style="@style/main_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/main_button"
         android:text="@string/delete"/>
 
 </LinearLayout>

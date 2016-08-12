@@ -18,14 +18,32 @@
         <item name="android:textColor">@drawable/btn_text_color</item>
     </style>
 
+    <style name="common_edittext">
+        <item name="android:layout_marginTop">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginLeft">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginRight">@dimen/dimen_10_dip</item>
+        <item name="android:textSize">@dimen/common_text_size17</item>
+    </style>
+
+    <style name="common_text">
+        <item name="android:layout_marginLeft">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginRight">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginTop">@dimen/dimen_10_dip</item>
+        <item name="android:textSize">@dimen/common_text_size17</item>
+    </style>
+
     <style name="main_button">
         <item name="android:height">@dimen/dimen_50_dip</item>
         <item name="android:layout_marginBottom">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginRight">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginLeft">@dimen/dimen_10_dip</item>
         <item name="android:textSize">@dimen/common_text_size20</item>
     </style>
+
     <style name="list_text_size_max">
         <item name="android:textSize">@dimen/common_text_size20</item>
     </style>
+
     <style name="font_32sp">
         <item name="android:textSize">@dimen/common_text_size32</item>
     </style>
