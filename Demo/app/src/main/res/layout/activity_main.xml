@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar" />
+
+    <Button
+        android:id="@+id/main_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/calculator"/>
+
+    <Button
+        android:id="@+id/main_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/sqlite"/>
+
+    <Button
+        android:id="@+id/main_imageselector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/imageselector"/>
+
+    <Button
+        android:id="@+id/main_telephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/telephone"/>
+
+    <Button
+        android:id="@+id/main_sendsms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/sendsms"/>
+</LinearLayout>

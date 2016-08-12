@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cp_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_notviewmodel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_discription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/cp_white"
+                    android:hint="输入图片描述"
+                    android:maxLines="6"
+                    android:padding="5dp"
+                    android:textColor="@color/cp_remark"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@mipmap/cp_imageselector_view_delete"/>
+                        <Button
+                            android:id="@+id/btn_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:minWidth="10dp"
+                            android:paddingLeft="5dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:paddingRight="5dp"
+                            android:background="@null"
+                            android:text="删除图片"
+                            android:textColor="@color/cp_red" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:background="@mipmap/cp_imageselector_view_done"/>
+
+                        <Button
+                            android:id="@+id/btn_done"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:minWidth="10dp"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="40dp"
+                            android:text="完成"
+                            android:textColor="@color/cp_blue" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_isviewmodel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/cp_white"
+                android:hint="图片描述"
+                android:maxLines="6"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:textColor="@color/cp_remark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.tdroid.imageselector.library.imageselelctor.photoview.PhotoView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_content"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activity.CalculatorActivity">
+
+    <include layout="@layout/title_bar"/>
+
+    <TextView
+        android:id="@+id/textView_show"
+        android:layout_width="@dimen/dimen_290_dip"
+        android:layout_height="@dimen/dimen_40_dip"
+        android:paddingLeft="@dimen/dimen_10_dip"
+        android:textSize="@dimen/common_text_size20"
+        android:gravity="center_vertical"
+        android:background="@drawable/btn_select"
+        android:text="@string/zero"
+        />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="4"
+        android:rowCount="6">
+        <Button
+            android:id="@+id/one"
+            style="@style/button"
+            android:text="@string/one"/>
+
+        <Button
+            android:id="@+id/two"
+            style="@style/button"
+            android:text="@string/two"/>
+        　　　
+
+        <Button
+            android:id="@+id/three"
+            style="@style/button"
+            android:text="@string/three"/>
+
+        <Button
+            android:id="@+id/devide"
+            style="@style/button"
+            android:text="@string/devide"/>
+
+        <Button
+            android:id="@+id/four"
+            style="@style/button"
+            android:text="@string/four"/>
+
+        <Button
+            android:id="@+id/five"
+            style="@style/button"
+            android:text="@string/five"/>
+
+        <Button
+            android:id="@+id/six"
+            style="@style/button"
+            android:text="@string/six"/>
+
+        <Button
+            android:id="@+id/multiply"
+            style="@style/button"
+            android:text="@string/multiply"/>
+
+        <Button
+            android:id="@+id/seven"
+            style="@style/button"
+            android:text="@string/seven"/>
+        　　
+
+        <Button
+            android:id="@+id/eight"
+            style="@style/button"
+            android:text="@string/eight"/>
+        　　
+
+        <Button
+            android:id="@+id/nine"
+            style="@style/button"
+            android:text="@string/nine"/>
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/button"
+            android:text="@string/minus"/>
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/button"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="@string/zero"/>
+        　　
+
+        <Button
+            android:id="@+id/point"
+            style="@style/button"
+            android:text="@string/point"/>
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/button"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
+            android:text="@string/plus"/>
+
+        <Button
+            android:id="@+id/equal"
+            style="@style/button"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill"
+            android:text="@string/equal"/>
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/button"
+            android:layout_gravity="fill"
+            android:text="@string/clear"/>
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:refrence="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片选择器demo(编辑选择)"
+        android:layout_margin="10dp"/>
+    <com.tdroid.imageselector.library.imageselelctor.ImageSelectorView
+        android:id="@+id/imageselector_editmodel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        refrence:selectorview_maxselectsize="5"
+        refrence:selectorview_caption="可以编辑选择图片"
+        refrence:selectorview_viewmodel="false"
+        refrence:selectorview_discription="可以编辑选择图片,最多选择五张" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片选择器demo(只能查看)"
+        android:layout_margin="10dp"/>
+    <com.tdroid.imageselector.library.imageselelctor.ImageSelectorView
+        android:id="@+id/imageselector_viewmodel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        refrence:selectorview_maxselectsize="5"
+        refrence:selectorview_viewmodel="true"
+        refrence:selectorview_caption="只能浏览图片"
+        refrence:selectorview_discription="只能浏览图片" />
+</LinearLayout>
