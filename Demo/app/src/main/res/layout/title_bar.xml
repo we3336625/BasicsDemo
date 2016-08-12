@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/layout_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_86_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/list_text_size_max"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_80_dip"
+            android:layout_marginLeft="@dimen/dimen_8_dip"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/back_r2_c2"
+            android:drawablePadding="@dimen/dimen_10_dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_10_dip"
+            android:text="@string/text_back"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/font_32sp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_80_dip"
+            android:layout_centerInParent="true"
+            android:layout_weight="3"
+            android:gravity="center_vertical|center"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_title_right"
+            style="@style/list_text_size_max"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_80_dip"
+            android:layout_marginLeft="@dimen/dimen_20_dip"
+            android:layout_marginRight="@dimen/dimen_10_dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

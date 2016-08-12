@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_10_dip"
+        android:text="@string/phone"
+        android:textSize="@dimen/common_text_size20"
+        />
+
+    <EditText
+        android:id="@+id/et_sendsms_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_10_dip"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_10_dip"
+        android:text="@string/content"
+        android:textSize="@dimen/common_text_size20"
+        />
+
+    <EditText
+        android:id="@+id/et_sendsms_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_200_dip"
+        android:layout_marginLeft="@dimen/dimen_10_dip"
+        android:layout_marginTop="@dimen/dimen_10_dip"
+        android:background="@android:drawable/alert_light_frame"
+        android:gravity="top"
+        />
+
+    <Button
+        android:id="@+id/btn_sendsms_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10_dip"
+        android:text="@string/send"
+        android:textSize="@dimen/common_text_size20"
+        />
+</LinearLayout>
