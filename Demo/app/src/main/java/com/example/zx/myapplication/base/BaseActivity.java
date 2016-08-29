@@ -1,4 +1,4 @@
-package com.example.zx.myapplication.activity;
+package com.example.zx.myapplication.base;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

@@ -1,16 +1,23 @@
-package com.example.zx.myapplication.activity;
+package com.example.zx.myapplication.biz.main;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.zx.myapplication.R;
+import com.example.zx.myapplication.base.BaseActivity;
+import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
+import com.example.zx.myapplication.biz.ImageSelector.ImageSelectorActivity;
+import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
+import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
+import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
+import com.example.zx.myapplication.biz.VerificationCode.VerifyCodeActivity;
 
 /**
  * 主界面
  * Created by ex-zhangxiang on 2016/7/22.
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainContract.view{
 
 	public static final String TAG = "MainActivity";
 
@@ -19,6 +26,8 @@ public class MainActivity extends BaseActivity {
 	private Button mBtnTelephonoe;
 	private Button mBtnSendSMS;
 	private Button mBtnFileStore;
+	private Button mBtnVerifyCode;
+	private MainContract.Presenter mPresenter;
 
 	@Override
 	protected void findViews() {
@@ -30,6 +39,8 @@ public class MainActivity extends BaseActivity {
 		mBtnTelephonoe = (Button) findViewById(R.id.main_telephone);
 		mBtnSendSMS = (Button) findViewById(R.id.main_sendsms);
 		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
+		mBtnVerifyCode = (Button) findViewById(R.id.main_verify_code);
+		new MainPresenter(this,this);
 	}
 
 	private void initTitleButton() {
@@ -50,6 +61,7 @@ public class MainActivity extends BaseActivity {
 		mBtnTelephonoe.setOnClickListener(this);
 		mBtnSendSMS.setOnClickListener(this);
 		mBtnFileStore.setOnClickListener(this);
+		mBtnVerifyCode.setOnClickListener(this);
 	}
 
 	@Override
@@ -57,22 +69,35 @@ public class MainActivity extends BaseActivity {
 		super.onClick(view);
 		switch (view.getId()) {
 			case R.id.main_sqlite:
-				startNextActivity(SQLiteActivity.class);
+				mPresenter.startNetxtActivity(SQLiteActivity.class);
 				break;
 			case R.id.main_imageselector:
-				startNextActivity(ImageSelectorActivity.class);
+				mPresenter.startNetxtActivity(ImageSelectorActivity.class);
 				break;
 			case R.id.main_telephone:
-				startNextActivity(TelephoneActivity.class);
+				mPresenter.startNetxtActivity(TelephoneActivity.class);
 				break;
 			case R.id.main_sendsms:
-				startNextActivity(SendSMSActivity.class);
+				mPresenter.startNetxtActivity(SendSMSActivity.class);
 				break;
 			case R.id.main_filestore:
-				startNextActivity(FileStoreActivity.class);
+				mPresenter.startNetxtActivity(FileStoreActivity.class);
+				break;
+			case R.id.main_verify_code:
+				mPresenter.startNetxtActivity(VerifyCodeActivity.class);
 				break;
 			default:
 				break;
 		}
+	}
+
+	@Override
+	public void startActivity(Class cls) {
+		startNextActivity(cls);
+	}
+
+	@Override
+	public void setPresenter(MainContract.Presenter presenter) {
+		mPresenter = presenter;
 	}
 }

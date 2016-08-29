@@ -33,6 +33,14 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"/>
 
+    <CheckBox
+        android:id="@+id/cb_filestore_remenberpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remenberpwd"
+        style="@style/common_checkbox"
+        android:checked="true"/>
+
     <Button
         android:id="@+id/btn_filestore_login"
         style="@style/main_button"

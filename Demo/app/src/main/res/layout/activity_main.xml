@@ -40,4 +40,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/filestore"/>
+
+    <Button
+        android:id="@+id/main_verify_code"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verifycode"/>
 </LinearLayout>

@@ -1,22 +1,23 @@
-package com.example.zx.myapplication.activity;
+package com.example.zx.myapplication.biz.Telephone;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.zx.myapplication.R;
+import com.example.zx.myapplication.base.BaseActivity;
 
 /**
  * 打电话
  * Created by ex-zhangxiang on 2016/8/9.
  */
-public class TelephoneActivity extends BaseActivity {
+public class TelephoneActivity extends BaseActivity implements TelephoneContract.View{
 
 	private Button mBtnCall;
 	private EditText mEtNumber;
+	TelephoneContract.Presenter mPresenter;
 
 	@Override
 	protected int getLayoutId() {
@@ -29,6 +30,7 @@ public class TelephoneActivity extends BaseActivity {
 		setTitle(R.string.tele_title);
 		mEtNumber = (EditText) findViewById(R.id.telephone_et_number);
 		mBtnCall = (Button) findViewById(R.id.telephone_btn_call);
+		new TelephonePresenter(this);
 	}
 
 	@Override
@@ -43,16 +45,25 @@ public class TelephoneActivity extends BaseActivity {
 		switch (view.getId()) {
 			case R.id.telephone_btn_call:
 				String number = mEtNumber.getText().toString();
-				if (number != null && number.length() > 0) {
-					Uri uri = Uri.parse("tel:" + number);
-					Intent intent = new Intent();
-					intent.setAction(Intent.ACTION_CALL);
-					intent.setData(uri);
-					startNextActivity(intent);
-				} else {
-					tip(R.string.numberisnull);
-				}
+
+				mPresenter.startToActivity(number);
+
 				break;
 		}
+	}
+
+	@Override
+	public void showErrorTip() {
+		tip(R.string.numberisnull);
+	}
+
+	@Override
+	public void toActivity(Intent intent) {
+		startNextActivity(intent);
+	}
+
+	@Override
+	public void setPresenter(TelephoneContract.Presenter presenter) {
+		mPresenter = presenter;
 	}
 }

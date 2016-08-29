@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme">
 
         <!-- 计算器 -->
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".biz.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -33,19 +33,22 @@
         </activity>
 
         <!-- sqlite -->
-        <activity android:name=".activity.SQLiteActivity"/>
+        <activity android:name=".biz.SQLite.SQLiteActivity"/>
 
         <!-- imageselector -->
-        <activity android:name=".activity.ImageSelectorActivity"/>
+        <activity android:name=".biz.ImageSelector.ImageSelectorActivity"/>
 
         <!-- telephone -->
-        <activity android:name=".activity.TelephoneActivity"/>
+        <activity android:name=".biz.Telephone.TelephoneActivity"/>
 
         <!-- sendSMS -->
-        <activity android:name=".activity.SendSMSActivity"/>
+        <activity android:name=".biz.sendsms.SendSMSActivity"/>
 
         <!-- 文件存储 -->
-        <activity android:name=".activity.FileStoreActivity"/>
+        <activity android:name=".biz.filestore.FileStoreActivity"/>
+
+        <!-- 验证码 -->
+        <activity android:name=".biz.VerificationCode.VerifyCodeActivity"/>
 
     </application>
 </manifest>
