@@ -47,5 +47,7 @@
     <string name="iserror">验证码错误</string>
     <string name="verifycode">验证码</string>
 
+    <string name="selectbank">银行卡选择</string>
+
     <string name="text_back">返回</string>
 </resources>

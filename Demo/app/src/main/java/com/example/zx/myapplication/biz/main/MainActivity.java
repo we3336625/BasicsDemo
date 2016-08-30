@@ -9,6 +9,7 @@ import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
 import com.example.zx.myapplication.biz.ImageSelector.ImageSelectorActivity;
 import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
+import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
 import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
 import com.example.zx.myapplication.biz.VerificationCode.VerifyCodeActivity;
@@ -27,6 +28,8 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 	private Button mBtnSendSMS;
 	private Button mBtnFileStore;
 	private Button mBtnVerifyCode;
+	private Button mBtnSelectBank;
+
 	private MainContract.Presenter mPresenter;
 
 	@Override
@@ -40,6 +43,8 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		mBtnSendSMS = (Button) findViewById(R.id.main_sendsms);
 		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
 		mBtnVerifyCode = (Button) findViewById(R.id.main_verify_code);
+		mBtnSelectBank = (Button) findViewById(R.id.main_select_bank);
+
 		new MainPresenter(this,this);
 	}
 
@@ -62,6 +67,7 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		mBtnSendSMS.setOnClickListener(this);
 		mBtnFileStore.setOnClickListener(this);
 		mBtnVerifyCode.setOnClickListener(this);
+		mBtnSelectBank.setOnClickListener(this);
 	}
 
 	@Override
@@ -85,6 +91,9 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 				break;
 			case R.id.main_verify_code:
 				mPresenter.startNetxtActivity(VerifyCodeActivity.class);
+				break;
+			case R.id.main_select_bank:
+				mPresenter.startNetxtActivity(SelectBankActivity.class);
 				break;
 			default:
 				break;
