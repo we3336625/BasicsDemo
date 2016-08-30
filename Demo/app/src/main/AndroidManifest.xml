@@ -50,5 +50,10 @@
         <!-- 验证码 -->
         <activity android:name=".biz.VerificationCode.VerifyCodeActivity"/>
 
+        <!-- 银行卡选择 -->
+        <activity android:name=".biz.selectbank.SelectBankActivity"/>
+
+        <!-- 银行卡列表 -->
+        <activity android:name=".biz.selectbank.banklist.BankListActivity"/>
     </application>
 </manifest>

@@ -47,4 +47,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/verifycode"/>
+
+    <Button
+        android:id="@+id/main_select_bank"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selectbank"/>
 </LinearLayout>
