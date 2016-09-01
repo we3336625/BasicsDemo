@@ -1,25 +1,39 @@
 package com.example.zx.myapplication.biz.selectbank.banklist;
 
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
+import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.data.data.BankCardBean;
+import com.example.zx.myapplication.db.BankDbHelper;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 选择银行卡
  * Created by ex-zhangxiang on 2016/8/30.
  */
-public class BankListActivity extends BaseActivity {
+public class BankListActivity extends BaseActivity implements BankListContact.view {
 
 	private ListView mListView;
+	private Button btn_banklist;
 	private List<BankCardBean> mList = new ArrayList<BankCardBean>();
 	private BankListAdapter adapter;
+	private BankCardBean bean = new BankCardBean();
+
+	private BankListContact.presenter mPresenter;
 
 	@Override
 	protected int getLayoutId() {
@@ -30,7 +44,9 @@ public class BankListActivity extends BaseActivity {
 	protected void findViews() {
 		super.findViews();
 		mListView = (ListView) findViewById(R.id.lv_banklist);
-		setTitle("选择银行卡");
+		btn_banklist = (Button) findViewById(R.id.btn_banklist);
+		setTitle(R.string.selectbank);
+		new BankListPresenter(this, this);
 	}
 
 	@Override
@@ -45,49 +61,46 @@ public class BankListActivity extends BaseActivity {
 					child.findViewById(R.id.iv_bank_select).setVisibility(View.INVISIBLE);
 				}
 				view.findViewById(R.id.iv_bank_select).setVisibility(View.VISIBLE);
+
+				bean.setBankName(mList.get(position).getBankName());
+				bean.setCardNumber(mList.get(position).getCardNumber());
+
 			}
 		});
+
+		btn_banklist.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View view) {
+		super.onClick(view);
+		if (view.getId() == R.id.btn_banklist) {
+			Intent intent = new Intent();
+			Bundle bundle = new Bundle();
+			bundle.putSerializable(SelectBankActivity.BUNDLE, bean);
+			intent.putExtras(bundle);
+			setResult(RESULT_OK, intent);
+			closeActivity();
+		}
 	}
 
 	@Override
 	protected void initData() {
 		super.initData();
-		BankCardBean bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("中国银行");
-		bankCardBean.setCardNumber("1111");
-		mList.add(bankCardBean);
 
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("农业银行");
-		bankCardBean.setCardNumber("2222");
-		mList.add(bankCardBean);
-
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("建设银行");
-		bankCardBean.setCardNumber("3333");
-		mList.add(bankCardBean);
-
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("招商银行");
-		bankCardBean.setCardNumber("4444");
-		mList.add(bankCardBean);
-
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("浙商银行");
-		bankCardBean.setCardNumber("5555");
-		mList.add(bankCardBean);
-
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("工商银行");
-		bankCardBean.setCardNumber("6666");
-		mList.add(bankCardBean);
-
-		bankCardBean = new BankCardBean();
-		bankCardBean.setBankName("人民银行");
-		bankCardBean.setCardNumber("7777");
-		mList.add(bankCardBean);
+		mPresenter.queryBank();
 
 		adapter = new BankListAdapter(this, mList);
 		mListView.setAdapter(adapter);
+	}
+
+	@Override
+	public void addList(BankCardBean bankCardBean) {
+		mList.add(bankCardBean);
+	}
+
+	@Override
+	public void setPresenter(BankListContact.presenter presenter) {
+		mPresenter = presenter;
 	}
 }

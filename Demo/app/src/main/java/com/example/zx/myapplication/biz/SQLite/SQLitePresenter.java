@@ -30,7 +30,7 @@ public class SQLitePresenter implements SQLiteContract.Presenter {
 	@Override
 	public void insert(Context context) {
 		TestDbHelper testDbHelper = new TestDbHelper(context, "stu_db", null, 2);
-		testDbHelper.SqlInsert(testDbHelper);
+		testDbHelper.SqlInsert(testDbHelper, "xiaoming", 21, "male");
 	}
 
 	@Override

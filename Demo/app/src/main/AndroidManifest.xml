@@ -55,5 +55,8 @@
 
         <!-- 银行卡列表 -->
         <activity android:name=".biz.selectbank.banklist.BankListActivity"/>
+
+        <!-- 银行卡数据插入 -->
+        <activity android:name=".biz.selectbank.bankinsertdb.BankInsertDbActivity"/>
     </application>
 </manifest>

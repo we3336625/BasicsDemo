@@ -10,4 +10,11 @@
         android:id="@+id/select_bank"
         layout="@layout/bank_list"/>
 
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/insert"/>
+
 </LinearLayout>

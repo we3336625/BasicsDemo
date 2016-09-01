@@ -1,9 +1,11 @@
 package com.example.zx.myapplication.data.data;
 
+import java.io.Serializable;
+
 /**
  * Created by ex-zhangxiang on 2016/8/30.
  */
-public class BankCardBean {
+public class BankCardBean implements Serializable{
 
 	private String bankName;
 	private String cardNumber;

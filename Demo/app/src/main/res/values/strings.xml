@@ -48,6 +48,16 @@
     <string name="verifycode">验证码</string>
 
     <string name="selectbank">银行卡选择</string>
+    <string name="bankname">要插入的银行卡名</string>
+    <string name="banknumber">银行卡尾号</string>
+
+    <string name="china_bank">中国银行</string>
+    <string name="nong_ye_bank">农业银行</string>
+    <string name="jian_she_bank">建设银行</string>
+    <string name="zhao_shang_bank">招商银行</string>
+    <string name="zhe_shang_bank">浙商银行</string>
+    <string name="gong_shang_bank">工商银行</string>
+    <string name="ren_min_bank">人民银行</string>
 
     <string name="text_back">返回</string>
 </resources>
