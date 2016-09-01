@@ -31,13 +31,13 @@ public class TestDbHelper extends SQLiteOpenHelper {
 		Log.i(TAG, "update Datebase  ------------------------->");
 	}
 
-	public void SqlInsert(TestDbHelper testDbHelper) {
+	public void SqlInsert(TestDbHelper testDbHelper, String name, int age, String sex) {
 		SQLiteDatabase db = testDbHelper.getWritableDatabase();
 		ContentValues cv = new ContentValues();
 		cv.put("id", 1);
-		cv.put("sname", "xiaoming");
-		cv.put("sage", 21);
-		cv.put("ssex", "male");
+		cv.put("sname", name);
+		cv.put("sage", age);
+		cv.put("ssex", sex);
 		db.insert("stu_table", null, cv);
 		db.close();
 	}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+
+    <TextView
+        style="@style/common_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bankname"/>
+
+    <RadioGroup
+        android:id="@+id/rg_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10_dip"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_china_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:text="@string/china_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_nong_ye_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:text="@string/nong_ye_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_jian_she_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:text="@string/jian_she_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_zhao_shang_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:layout_marginLeft="-380dip"
+            android:layout_marginTop="@dimen/dimen_50_dip"
+            android:text="@string/zhao_shang_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_zhe_shang_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:layout_marginTop="@dimen/dimen_50_dip"
+            android:text="@string/zhe_shang_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_gong_shang_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:layout_marginTop="@dimen/dimen_50_dip"
+            android:text="@string/gong_shang_bank"/>
+
+        <RadioButton
+            android:id="@+id/rb_ren_min_bank"
+            style="@style/common_radiobutton"
+            android:layout_width="@dimen/dimen_120_dip"
+            android:layout_height="@dimen/dimen_50_dip"
+            android:layout_marginLeft="-380dip"
+            android:layout_marginTop="@dimen/dimen_100_dip"
+            android:text="@string/ren_min_bank"/>
+    </RadioGroup>
+
+    <TextView
+        style="@style/common_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/banknumber"/>
+
+    <EditText
+        android:id="@+id/et_insertbanknumber"
+        style="@style/common_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="4"/>
+
+    <Button
+        android:id="@+id/btn_insertbank"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/insert"/>
+
+</LinearLayout>

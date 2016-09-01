@@ -46,6 +46,14 @@
         <item name="android:textSize">@dimen/common_text_size20</item>
     </style>
 
+    <style name="common_radiobutton">
+        <item name="android:layout_marginBottom">@dimen/dimen_10_dip</item>
+        <item name="android:layout_marginLeft">@dimen/dimen_10_dip</item>
+        <item name="android:height">@dimen/dimen_50_dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/common_text_size20</item>
+    </style>
+
     <style name="list_text_size_max">
         <item name="android:textSize">@dimen/common_text_size20</item>
     </style>
