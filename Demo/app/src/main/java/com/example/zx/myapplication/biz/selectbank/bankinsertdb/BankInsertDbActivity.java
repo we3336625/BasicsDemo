@@ -27,6 +27,8 @@ public class BankInsertDbActivity extends BaseActivity implements RadioGroup.OnC
 		btn_insertbank = findViewById(R.id.btn_insertbank);
 
 		rg_bank = (RadioGroup) findViewById(R.id.rg_bank);
+
+		new BankInsertDbPresenter(this, this);
 	}
 
 	@Override
