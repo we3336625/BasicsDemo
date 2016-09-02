@@ -45,12 +45,6 @@ public class FileStoreActivity extends BaseActivity implements FileStoreContract
 		new FileStorePresenter(this);
 
 		mPresenter.displayUserName();
-//		// 回显数据
-//		Map<String, String> userInfoMap = FileUtils.Read();
-//		if (userInfoMap != null){
-//			mEtFileStoreUsername.setText(userInfoMap.get("number"));
-//			mEtFileStorePwd.setText(userInfoMap.get("password"));
-//		}
 	}
 
 	@Override
@@ -68,17 +62,6 @@ public class FileStoreActivity extends BaseActivity implements FileStoreContract
 				String pwd = mEtFileStorePwd.getText().toString();
 
 				mPresenter.saveUserName(userName, pwd);
-//				if(TextUtils.isEmpty(userName) || TextUtils.isEmpty(pwd)) {
-//					// 弹出吐司
-//					tip( "请正确输入");
-////					return;
-//				}else if (mCbFileStoreRemenberpwd.isChecked()) {
-//					if (FileUtils.Write(userName, pwd)) {
-//						tip("保存成功!!");
-//					} else {
-//						tip("保存失败");
-//					}
-//				}
 				break;
 			default:
 				break;
