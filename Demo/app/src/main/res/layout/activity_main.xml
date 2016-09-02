@@ -14,13 +14,6 @@
         android:text="@string/sqlite"/>
 
     <Button
-        android:id="@+id/main_imageselector"
-        style="@style/main_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/imageselector"/>
-
-    <Button
         android:id="@+id/main_telephone"
         style="@style/main_button"
         android:layout_width="match_parent"

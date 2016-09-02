@@ -35,9 +35,6 @@
         <!-- sqlite -->
         <activity android:name=".biz.SQLite.SQLiteActivity"/>
 
-        <!-- imageselector -->
-        <activity android:name=".biz.ImageSelector.ImageSelectorActivity"/>
-
         <!-- telephone -->
         <activity android:name=".biz.Telephone.TelephoneActivity"/>
 

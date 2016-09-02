@@ -7,7 +7,6 @@ import android.widget.TextView;
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
-import com.example.zx.myapplication.biz.ImageSelector.ImageSelectorActivity;
 import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
 import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
@@ -23,7 +22,6 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 	public static final String TAG = "MainActivity";
 
 	private Button mBtnSQLite;
-	private Button mBtnImageSelector;
 	private Button mBtnTelephonoe;
 	private Button mBtnSendSMS;
 	private Button mBtnFileStore;
@@ -38,7 +36,6 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		setTitle(R.string.main);
 		initTitleButton();
 		mBtnSQLite = (Button) findViewById(R.id.main_sqlite);
-		mBtnImageSelector = (Button) findViewById(R.id.main_imageselector);
 		mBtnTelephonoe = (Button) findViewById(R.id.main_telephone);
 		mBtnSendSMS = (Button) findViewById(R.id.main_sendsms);
 		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
@@ -62,7 +59,6 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 	protected void setupListeners() {
 		super.setupListeners();
 		mBtnSQLite.setOnClickListener(this);
-		mBtnImageSelector.setOnClickListener(this);
 		mBtnTelephonoe.setOnClickListener(this);
 		mBtnSendSMS.setOnClickListener(this);
 		mBtnFileStore.setOnClickListener(this);
@@ -76,9 +72,6 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		switch (view.getId()) {
 			case R.id.main_sqlite:
 				mPresenter.startNetxtActivity(SQLiteActivity.class);
-				break;
-			case R.id.main_imageselector:
-				mPresenter.startNetxtActivity(ImageSelectorActivity.class);
 				break;
 			case R.id.main_telephone:
 				mPresenter.startNetxtActivity(TelephoneActivity.class);
