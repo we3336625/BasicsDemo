@@ -1,5 +1,6 @@
 package com.example.zx.myapplication.biz.main;
 
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -91,6 +92,25 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 			default:
 				break;
 		}
+	}
+
+	private long PRESS_TIME;
+
+	/**
+	 * 重写onKeyDown，双击退出
+	 * @param keyCode
+	 * @param event
+	 * @return
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (System.currentTimeMillis() - PRESS_TIME > 2000){
+			tip("再按一次退出");
+		} else if (System.currentTimeMillis() - PRESS_TIME <= 2000){
+			closeActivity();
+		}
+		PRESS_TIME = System.currentTimeMillis();
+		return true;
 	}
 
 	@Override
