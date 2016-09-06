@@ -24,12 +24,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- 计算器 -->
-        <activity android:name=".biz.main.MainActivity">
+        <activity android:name=".biz.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".biz.login.register.RegisterActivity"/>
+
+        <!-- 主界面 -->
+        <activity android:name=".biz.main.MainActivity">
+
         </activity>
 
         <!-- sqlite -->

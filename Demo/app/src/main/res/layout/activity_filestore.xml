@@ -7,7 +7,7 @@
     <include layout="@layout/title_bar"/>
 
     <TextView
-        style="@style/common_text"
+        style="@style/common_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/username"/>
@@ -21,7 +21,7 @@
         />
 
     <TextView
-        style="@style/common_text"
+        style="@style/common_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/pwd"/>
