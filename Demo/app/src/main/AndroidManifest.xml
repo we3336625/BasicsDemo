@@ -34,9 +34,7 @@
         <activity android:name=".biz.login.register.RegisterActivity"/>
 
         <!-- 主界面 -->
-        <activity android:name=".biz.main.MainActivity">
-
-        </activity>
+        <activity android:name=".biz.main.MainActivity"/>
 
         <!-- sqlite -->
         <activity android:name=".biz.SQLite.SQLiteActivity"/>
@@ -61,5 +59,8 @@
 
         <!-- 银行卡数据插入 -->
         <activity android:name=".biz.selectbank.bankinsertdb.BankInsertDbActivity"/>
+
+        <!-- 日记 -->
+        <activity android:name=".biz.diary.DiaryActivity"/>
     </application>
 </manifest>

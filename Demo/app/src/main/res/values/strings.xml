@@ -66,7 +66,9 @@
     <string name="user_pwd_empty">请输入用户名、密码</string>
     <string name="sure_pwd">确认密码</string>
     <string name="pwdnotsame">两次输入的密码不相同</string>
-    <string name="number_english">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="number_english">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="diary">日记</string>
 
     <string name="text_back">返回</string>
 </resources>

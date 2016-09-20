@@ -28,6 +28,7 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 	private Button mBtnFileStore;
 	private Button mBtnVerifyCode;
 	private Button mBtnSelectBank;
+	private Button mBtnDiary;
 
 	private MainContract.Presenter mPresenter;
 
@@ -42,6 +43,7 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
 		mBtnVerifyCode = (Button) findViewById(R.id.main_verify_code);
 		mBtnSelectBank = (Button) findViewById(R.id.main_select_bank);
+		mBtnDiary = (Button) findViewById(R.id.main_diary);
 
 		new MainPresenter(this,this);
 	}
