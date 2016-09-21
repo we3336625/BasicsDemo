@@ -59,4 +59,11 @@
         android:layout_height="wrap_content"
         style="@style/main_button"
         android:text="@string/diary"/>
+
+    <Button
+        android:id="@+id/main_eventbus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/main_button"
+        android:text="@string/eventbus"/>
 </LinearLayout>

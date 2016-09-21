@@ -70,5 +70,11 @@
 
     <string name="diary">日记</string>
 
+    <string name="to_next_activity">跳转到第二个Activity</string>
+    <string name="eventbus_first">EventBus的使用One</string>
+    <string name="eventbus_to_first">通过EventBus传值给First</string>
+    <string name="eventbus_second">EventBus的使用Second</string>
+    <string name="eventbus">eventbus</string>
+
     <string name="text_back">返回</string>
 </resources>

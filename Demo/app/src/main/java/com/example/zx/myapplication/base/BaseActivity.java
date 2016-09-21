@@ -1,10 +1,10 @@
 package com.example.zx.myapplication.base;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,7 +18,7 @@ import com.example.zx.myapplication.R;
 /**
  * Created by ex-zhangxiang on 2016/7/21.
  */
-public abstract class BaseActivity extends Activity implements View.OnClickListener {
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
 	/**
 	 * 标题栏标题
@@ -37,6 +37,9 @@ public abstract class BaseActivity extends Activity implements View.OnClickListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		if (getSupportActionBar() != null){
+			getSupportActionBar().hide();
+		}
 		setContentView(getLayoutId());
 		initResouce();
 

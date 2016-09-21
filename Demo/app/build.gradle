@@ -1,21 +1,39 @@
+// 声明是android程序
 apply plugin: 'com.android.application'
 
 android {
+    // 编译SDK的版本
     compileSdkVersion 24
+    // build tools 的版本
     buildToolsVersion "24.0.0"
 
     defaultConfig {
+        // 应用的包名
         applicationId "com.example.zx.myapplication"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }
+
+    // Java版本
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
     buildTypes {
         release {
+            // 是否进行混淆
             minifyEnabled false
+            // 混淆文件位置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false // lint时候终止错误上报,防止编译的时候莫名的失败
     }
 }
 
@@ -23,4 +41,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
+    // eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    // gson
+    compile 'com.google.code.gson:gson:2.7'
 }

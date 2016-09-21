@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_event_bus_first"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zx.myapplication.biz.eventbus.eventbusfirst.EventBusFirstActivity">
+
+    <include
+        android:id="@+id/eventbus_title"
+        layout="@layout/title_bar"/>
+
+    <Button
+        android:id="@+id/btn_eventbus_to_next"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventbus_title"
+        android:layout_marginTop="@dimen/dimen_20_dip"
+        android:text="@string/to_next_activity"/>
+
+    <TextView
+        android:id="@+id/tv_eventbus_show"
+        style="@style/common_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_eventbus_to_next"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
