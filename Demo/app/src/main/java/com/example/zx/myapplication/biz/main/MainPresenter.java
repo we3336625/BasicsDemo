@@ -7,8 +7,8 @@ import android.content.Context;
  */
 public class MainPresenter implements MainContract.Presenter {
 
-	Context mContext;
-	MainContract.view view;
+	private Context mContext;
+	private MainContract.view view;
 
 	public MainPresenter(Context context, MainContract.view view) {
 		this.mContext = context;

@@ -28,6 +28,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.v
 	@Override
 	protected void findViews() {
 		super.findViews();
+		setTitle(R.string.register);
 		et_login_user = (EditText) findViewById(R.id.et_login_user);
 		et_login_pwd = (EditText) findViewById(R.id.et_login_pwd);
 		btn_login = (Button) findViewById(R.id.btn_login);

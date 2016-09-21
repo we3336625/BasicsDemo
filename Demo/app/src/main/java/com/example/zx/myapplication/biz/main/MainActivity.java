@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
+import com.example.zx.myapplication.biz.diary.DiaryActivity;
+import com.example.zx.myapplication.biz.eventbus.eventbusfirst.EventBusFirstActivity;
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
 import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
 import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
@@ -28,6 +30,10 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 	private Button mBtnFileStore;
 	private Button mBtnVerifyCode;
 	private Button mBtnSelectBank;
+	private Button mBtnDiary;
+	private Button mBtnEventBus;
+
+	private long PRESS_TIME;//双击退出
 
 	private MainContract.Presenter mPresenter;
 
@@ -42,6 +48,8 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
 		mBtnVerifyCode = (Button) findViewById(R.id.main_verify_code);
 		mBtnSelectBank = (Button) findViewById(R.id.main_select_bank);
+		mBtnDiary = (Button) findViewById(R.id.main_diary);
+		mBtnEventBus = (Button) findViewById(R.id.main_eventbus);
 
 		new MainPresenter(this,this);
 	}
@@ -65,6 +73,8 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		mBtnFileStore.setOnClickListener(this);
 		mBtnVerifyCode.setOnClickListener(this);
 		mBtnSelectBank.setOnClickListener(this);
+		mBtnDiary.setOnClickListener(this);
+		mBtnEventBus.setOnClickListener(this);
 	}
 
 	@Override
@@ -89,12 +99,16 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 			case R.id.main_select_bank:
 				mPresenter.startNetxtActivity(SelectBankActivity.class);
 				break;
+			case R.id.main_diary:
+				mPresenter.startNetxtActivity(DiaryActivity.class);
+				break;
+			case R.id.main_eventbus:
+				mPresenter.startNetxtActivity(EventBusFirstActivity.class);
+				break;
 			default:
 				break;
 		}
 	}
-
-	private long PRESS_TIME;
 
 	/**
 	 * 重写onKeyDown，双击退出

@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.zx.myapplication">
 
-    <!-- 访问网络-->
+    <!-- 访问网络 -->
     <uses-permission android:name="android.permission.INTERNET"/>
-    <!--相机-->
+    <!-- 相机 -->
     <uses-permission android:name="android.permission.CAMERA"/>
     <!-- 往sdcard中写入数据的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -23,20 +23,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".biz.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".biz.login.register.RegisterActivity"/>
 
         <!-- 主界面 -->
-        <activity android:name=".biz.main.MainActivity">
-
-        </activity>
+        <activity android:name=".biz.main.MainActivity"/>
 
         <!-- sqlite -->
         <activity android:name=".biz.SQLite.SQLiteActivity"/>
@@ -61,5 +58,14 @@
 
         <!-- 银行卡数据插入 -->
         <activity android:name=".biz.selectbank.bankinsertdb.BankInsertDbActivity"/>
+
+        <!-- 日记 -->
+        <activity android:name=".biz.diary.DiaryActivity"/>
+
+        <!-- eventbus -->
+        <activity android:name=".biz.eventbus.eventbusfirst.EventBusFirstActivity"/>
+
+        <activity android:name=".biz.eventbus.eventbussecond.EventBusSecondActivity"/>
     </application>
+
 </manifest>

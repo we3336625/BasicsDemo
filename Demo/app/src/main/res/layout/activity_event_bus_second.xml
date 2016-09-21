@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_event_bus_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zx.myapplication.biz.eventbus.eventbussecond.EventBusSecondActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/title_bar"/>
+
+    <Button
+        android:id="@+id/btn_eventbus_to_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:layout_marginTop="@dimen/dimen_20_dip"
+        style="@style/main_button"
+        android:text="@string/eventbus_to_first"
+        />
+
+</RelativeLayout>
