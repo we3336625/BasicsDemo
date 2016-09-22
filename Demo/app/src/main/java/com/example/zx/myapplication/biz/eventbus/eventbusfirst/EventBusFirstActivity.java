@@ -8,13 +8,18 @@ import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.biz.eventbus.FirstEvent;
 import com.example.zx.myapplication.biz.eventbus.eventbussecond.EventBusSecondActivity;
+import com.example.zx.myapplication.utils.LogUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import butterknife.BindView;
+
 public class EventBusFirstActivity extends BaseActivity {
 
+	@BindView(R.id.btn_eventbus_to_next)
 	Button btn_eventbus_to_next;
+	@BindView(R.id.tv_eventbus_show)
 	TextView tv_eventbus_show;
 
 	@Override
@@ -28,8 +33,6 @@ public class EventBusFirstActivity extends BaseActivity {
 		// 注册eventbus
 		EventBus.getDefault().register(this);
 		setTitle(R.string.eventbus_first);
-		btn_eventbus_to_next = (Button) findViewById(R.id.btn_eventbus_to_next);
-		tv_eventbus_show = (TextView) findViewById(R.id.tv_eventbus_show);
 	}
 
 	@Override
@@ -50,6 +53,7 @@ public class EventBusFirstActivity extends BaseActivity {
 	public void onEventMainThread(FirstEvent event){
 		String msg = "接收到：" + event.getMsg();
 		tv_eventbus_show.setText(msg);
+		LogUtils.i(msg);
 		tip(msg);
 	}
 

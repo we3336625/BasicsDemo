@@ -9,8 +9,11 @@ import com.example.zx.myapplication.biz.eventbus.FirstEvent;
 
 import org.greenrobot.eventbus.EventBus;
 
+import butterknife.BindView;
+
 public class EventBusSecondActivity extends BaseActivity {
 
+	@BindView(R.id.btn_eventbus_to_first)
 	Button btn_eventbus_to_first;
 
 	@Override
@@ -22,7 +25,6 @@ public class EventBusSecondActivity extends BaseActivity {
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.eventbus_second);
-		btn_eventbus_to_first = (Button) findViewById(R.id.btn_eventbus_to_first);
 	}
 
 	@Override

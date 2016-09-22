@@ -9,16 +9,23 @@ import android.widget.EditText;
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 
+import butterknife.BindView;
+
 /**
  * sendSMS
  * Created by ex-zhangxiang on 2016/8/10.
  */
-public class SendSMSActivity extends BaseActivity implements SendSMSContract.view{
+public class SendSMSActivity extends BaseActivity implements SendSMSContract.view {
 
 	private static final String TAG = "SendSMSActivity";
-	private EditText mEtSendSMSPhone;
-	private EditText mEtSendSMSContent;
-	private Button mBtnSendSMSSend;
+
+	@BindView(R.id.et_sendsms_phone)
+	EditText mEtSendSMSPhone;
+	@BindView(R.id.et_sendsms_content)
+	EditText mEtSendSMSContent;
+	@BindView(R.id.btn_sendsms_send)
+	Button mBtnSendSMSSend;
+
 	private SendSMSContract.presenter mPresenter;
 
 	@Override
@@ -29,9 +36,6 @@ public class SendSMSActivity extends BaseActivity implements SendSMSContract.vie
 	@Override
 	protected void findViews() {
 		super.findViews();
-		mEtSendSMSPhone = (EditText) findViewById(R.id.et_sendsms_phone);
-		mEtSendSMSContent = (EditText) findViewById(R.id.et_sendsms_content);
-		mBtnSendSMSSend = (Button) findViewById(R.id.btn_sendsms_send);
 		new SendSMSPresenter(this);
 	}
 
@@ -48,7 +52,7 @@ public class SendSMSActivity extends BaseActivity implements SendSMSContract.vie
 			case R.id.btn_sendsms_send:
 				String phone = mEtSendSMSPhone.getText().toString();
 				String content = mEtSendSMSContent.getText().toString();
-				mPresenter.send(phone,content);
+				mPresenter.send(phone, content);
 //				if (phone != null && phone.length()>0) {
 //					if (content == null || content.equals("")){
 //						tip(R.string.content_is_null);

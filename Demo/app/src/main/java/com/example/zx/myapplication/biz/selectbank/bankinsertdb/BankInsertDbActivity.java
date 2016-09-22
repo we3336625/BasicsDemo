@@ -8,14 +8,20 @@ import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.data.data.BankCardBean;
 
+import butterknife.BindView;
+
 /**
  * Created by ex-zhangxiang on 2016/8/31.
  */
 public class BankInsertDbActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener, BankInsertDbContract.view {
 
-	private EditText et_insertbanknumber;
-	private View btn_insertbank;
-	private RadioGroup rg_bank;
+	@BindView(R.id.et_insertbanknumber)
+	EditText et_insertbanknumber;
+	@BindView(R.id.btn_insertbank)
+	View btn_insertbank;
+	@BindView(R.id.rg_bank)
+	RadioGroup rg_bank;
+
 	private BankCardBean bean = new BankCardBean();
 
 	private BankInsertDbContract.presenter mPresenter;
@@ -23,10 +29,6 @@ public class BankInsertDbActivity extends BaseActivity implements RadioGroup.OnC
 	@Override
 	protected void findViews() {
 		super.findViews();
-		et_insertbanknumber = (EditText) findViewById(R.id.et_insertbanknumber);
-		btn_insertbank = findViewById(R.id.btn_insertbank);
-
-		rg_bank = (RadioGroup) findViewById(R.id.rg_bank);
 
 		new BankInsertDbPresenter(this, this);
 	}

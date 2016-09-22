@@ -15,20 +15,26 @@ import com.example.zx.myapplication.biz.selectbank.banklist.BankListActivity;
 import com.example.zx.myapplication.data.data.BankCardBean;
 import com.example.zx.myapplication.utils.BankCardIconUtil;
 
+import butterknife.BindView;
+
 /**
  * Created by ex-zhangxiang on 2016/8/30.
  */
-public class SelectBankActivity extends BaseActivity implements SelectBankContract.view{
+public class SelectBankActivity extends BaseActivity implements SelectBankContract.view {
 
 	public static final String BUNDLE = "bundle";
 	public static final int FOR_RESULT = 0x01;
 
-	private LinearLayout select_bank;
-	private Button btn_insert;
-
-	private ImageView iv_bank_card;
-	private TextView tv_bank_name;
-	private TextView tv_bank_card_number;
+	@BindView(R.id.select_bank)
+	LinearLayout select_bank;
+	@BindView(R.id.btn_insert)
+	Button btn_insert;
+	@BindView(R.id.iv_bank_card)
+	ImageView iv_bank_card;
+	@BindView(R.id.tv_bank_name)
+	TextView tv_bank_name;
+	@BindView(R.id.tv_bank_card_number)
+	TextView tv_bank_card_number;
 
 	private SelectBankContract.presenter mPresenter;
 
@@ -40,11 +46,6 @@ public class SelectBankActivity extends BaseActivity implements SelectBankContra
 	@Override
 	protected void findViews() {
 		super.findViews();
-		select_bank = (LinearLayout) findViewById(R.id.select_bank);
-		btn_insert = (Button) findViewById(R.id.btn_insert);
-		iv_bank_card = (ImageView) findViewById(R.id.iv_bank_card);
-		tv_bank_name = (TextView) findViewById(R.id.tv_bank_name);
-		tv_bank_card_number = (TextView) findViewById(R.id.tv_bank_card_number);
 
 		new SelectBankPresenter(this);
 	}
@@ -59,9 +60,9 @@ public class SelectBankActivity extends BaseActivity implements SelectBankContra
 	@Override
 	public void onClick(View view) {
 		super.onClick(view);
-		switch (view.getId()){
+		switch (view.getId()) {
 			case R.id.select_bank:
-				Intent intent = new Intent(this,BankListActivity.class);
+				Intent intent = new Intent(this, BankListActivity.class);
 				startActivityForResult(intent, FOR_RESULT);
 				animLeftToRight();
 				break;

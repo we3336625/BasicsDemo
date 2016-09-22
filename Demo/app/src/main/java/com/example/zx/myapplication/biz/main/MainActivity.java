@@ -16,22 +16,32 @@ import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
 import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
 import com.example.zx.myapplication.biz.VerificationCode.VerifyCodeActivity;
 
+import butterknife.BindView;
+
 /**
  * 主界面
  * Created by ex-zhangxiang on 2016/7/22.
  */
-public class MainActivity extends BaseActivity implements MainContract.view{
+public class MainActivity extends BaseActivity implements MainContract.view {
 
 	public static final String TAG = "MainActivity";
 
-	private Button mBtnSQLite;
-	private Button mBtnTelephonoe;
-	private Button mBtnSendSMS;
-	private Button mBtnFileStore;
-	private Button mBtnVerifyCode;
-	private Button mBtnSelectBank;
-	private Button mBtnDiary;
-	private Button mBtnEventBus;
+	@BindView(R.id.main_sqlite)
+	Button mBtnSQLite;
+	@BindView(R.id.main_telephone)
+	Button mBtnTelephonoe;
+	@BindView(R.id.main_sendsms)
+	Button mBtnSendSMS;
+	@BindView(R.id.main_filestore)
+	Button mBtnFileStore;
+	@BindView(R.id.main_verify_code)
+	Button mBtnVerifyCode;
+	@BindView(R.id.main_select_bank)
+	Button mBtnSelectBank;
+	@BindView(R.id.main_diary)
+	Button mBtnDiary;
+	@BindView(R.id.main_eventbus)
+	Button mBtnEventBus;
 
 	private long PRESS_TIME;//双击退出
 
@@ -42,16 +52,8 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 		super.findViews();
 		setTitle(R.string.main);
 		initTitleButton();
-		mBtnSQLite = (Button) findViewById(R.id.main_sqlite);
-		mBtnTelephonoe = (Button) findViewById(R.id.main_telephone);
-		mBtnSendSMS = (Button) findViewById(R.id.main_sendsms);
-		mBtnFileStore = (Button) findViewById(R.id.main_filestore);
-		mBtnVerifyCode = (Button) findViewById(R.id.main_verify_code);
-		mBtnSelectBank = (Button) findViewById(R.id.main_select_bank);
-		mBtnDiary = (Button) findViewById(R.id.main_diary);
-		mBtnEventBus = (Button) findViewById(R.id.main_eventbus);
 
-		new MainPresenter(this,this);
+		new MainPresenter(this, this);
 	}
 
 	private void initTitleButton() {
@@ -112,15 +114,16 @@ public class MainActivity extends BaseActivity implements MainContract.view{
 
 	/**
 	 * 重写onKeyDown，双击退出
+	 *
 	 * @param keyCode
 	 * @param event
 	 * @return
 	 */
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if (System.currentTimeMillis() - PRESS_TIME > 2000){
+		if (System.currentTimeMillis() - PRESS_TIME > 2000) {
 			tip("再按一次退出");
-		} else if (System.currentTimeMillis() - PRESS_TIME <= 2000){
+		} else if (System.currentTimeMillis() - PRESS_TIME <= 2000) {
 			closeActivity();
 		}
 		PRESS_TIME = System.currentTimeMillis();

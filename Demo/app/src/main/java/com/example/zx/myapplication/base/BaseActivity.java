@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import com.example.zx.myapplication.R;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * Created by ex-zhangxiang on 2016/7/21.
  */
@@ -24,6 +27,9 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 	 * 标题栏标题
 	 */
 	private TextView mTitleTv;
+
+	/**butterknife 解绑对象*/
+	private Unbinder mUnbinder;
 
 	/**
 	 * 标题栏返回键
@@ -41,6 +47,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 			getSupportActionBar().hide();
 		}
 		setContentView(getLayoutId());
+		mUnbinder = ButterKnife.bind(this);
+
 		initResouce();
 
 		findViews();
@@ -267,5 +275,11 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 		if (mToast != null) {
 			mToast.cancel();
 		}
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		mUnbinder.unbind();
 	}
 }

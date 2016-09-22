@@ -17,15 +17,21 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+
 /**
  * 文件存储
  * Created by ex-zhangxiang on 2016/8/12.
  */
 public class FileStoreActivity extends BaseActivity implements FileStoreContract.view{
 
+	@BindView(R.id.et_filestore_username)
 	EditText mEtFileStoreUsername;
+	@BindView(R.id.et_filestore_pwd)
 	EditText mEtFileStorePwd;
+	@BindView(R.id.btn_filestore_login)
 	Button mBtnFileStoreLogin;
+	@BindView(R.id.cb_filestore_remenberpwd)
 	CheckBox mCbFileStoreRemenberpwd;
 	private FileStoreContract.presenter mPresenter;
 
@@ -38,12 +44,7 @@ public class FileStoreActivity extends BaseActivity implements FileStoreContract
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.filestore);
-		mEtFileStoreUsername = (EditText) findViewById(R.id.et_filestore_username);
-		mEtFileStorePwd = (EditText) findViewById(R.id.et_filestore_pwd);
-		mBtnFileStoreLogin = (Button) findViewById(R.id.btn_filestore_login);
-		mCbFileStoreRemenberpwd = (CheckBox) findViewById(R.id.cb_filestore_remenberpwd);
 		new FileStorePresenter(this);
-
 		mPresenter.displayUserName();
 	}
 
