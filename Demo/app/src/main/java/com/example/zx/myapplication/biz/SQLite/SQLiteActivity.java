@@ -10,18 +10,27 @@ import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.db.TestDbHelper;
 
+import butterknife.BindView;
+
 /**
  * sqlite  测试
  * Created by ex-zhangxiang on 2016/7/26.
  */
-public class SQLiteActivity extends BaseActivity implements SQLiteContract.View{
+public class SQLiteActivity extends BaseActivity implements SQLiteContract.View {
 
-	private Button mBtnCreateDatabase;
-	private Button mBtnUpdateDatebase;
-	private Button mBtnInsert;
-	private Button mBtnUpdate;
-	private Button mBtnQuery;
-	private Button mBtnDelete;
+	@BindView(R.id.sql_create_database)
+	Button mBtnCreateDatabase;
+	@BindView(R.id.sql_update_database)
+	Button mBtnUpdateDatebase;
+	@BindView(R.id.sql_insert)
+	Button mBtnInsert;
+	@BindView(R.id.sql_update)
+	Button mBtnUpdate;
+	@BindView(R.id.sql_query)
+	Button mBtnQuery;
+	@BindView(R.id.sql_delete)
+	Button mBtnDelete;
+
 	private SQLiteContract.Presenter mPresenter;
 
 	@Override
@@ -33,12 +42,6 @@ public class SQLiteActivity extends BaseActivity implements SQLiteContract.View{
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.sql_title);
-		mBtnCreateDatabase = (Button) findViewById(R.id.sql_create_database);
-		mBtnUpdateDatebase = (Button) findViewById(R.id.sql_update_database);
-		mBtnInsert = (Button) findViewById(R.id.sql_insert);
-		mBtnUpdate = (Button) findViewById(R.id.sql_update);
-		mBtnQuery = (Button) findViewById(R.id.sql_query);
-		mBtnDelete = (Button) findViewById(R.id.sql_delete);
 		new SQLitePresenter(this);
 	}
 

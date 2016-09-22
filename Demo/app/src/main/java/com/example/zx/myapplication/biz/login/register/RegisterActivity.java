@@ -7,17 +7,25 @@ import android.widget.EditText;
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 
+import butterknife.BindView;
+
 /**
  * 注册
  * Created by ex-zhangxiang on 2016/9/5.
  */
 public class RegisterActivity extends BaseActivity implements RegisterContract.view {
 
-	private EditText et_login_user;
-	private EditText et_login_pwd;
-	private Button btn_login;
-	private EditText et_login_sure_pwd;
-	private Button btn_sure;
+	@BindView(R.id.et_login_user)
+	EditText et_login_user;
+	@BindView(R.id.et_login_pwd)
+	EditText et_login_pwd;
+	@BindView(R.id.btn_login)
+	Button btn_login;
+	@BindView(R.id.et_login_sure_pwd)
+	EditText et_login_sure_pwd;
+	@BindView(R.id.btn_sure)
+	Button btn_sure;
+
 	private RegisterContract.presenter mPresenter;
 
 	@Override
@@ -29,11 +37,6 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.v
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.register);
-		et_login_user = (EditText) findViewById(R.id.et_login_user);
-		et_login_pwd = (EditText) findViewById(R.id.et_login_pwd);
-		btn_login = (Button) findViewById(R.id.btn_login);
-		et_login_sure_pwd = (EditText) findViewById(R.id.et_login_sure_pwd);
-		btn_sure = (Button) findViewById(R.id.btn_sure);
 
 		btn_login.setVisibility(View.GONE);
 

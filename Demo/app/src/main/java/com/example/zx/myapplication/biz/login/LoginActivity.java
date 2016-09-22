@@ -10,6 +10,8 @@ import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.biz.login.register.RegisterActivity;
 import com.example.zx.myapplication.biz.main.MainActivity;
 
+import butterknife.BindView;
+
 /**
  * 登录
  * Created by ex-zhangxiang on 2016/9/5.
@@ -18,12 +20,16 @@ public class LoginActivity extends BaseActivity implements LoginContract.view {
 
 	public static final String LOGINUSER = "login";
 	public static final String LOGINPWD = "pwd";
-
-	private EditText et_login_user;
-	private EditText et_login_pwd;
-	private Button btn_login;
-	private Button btn_register;
-	private TextView back;
+	@BindView(R.id.et_login_user)
+	EditText et_login_user;
+	@BindView(R.id.et_login_pwd)
+	EditText et_login_pwd;
+	@BindView(R.id.btn_login)
+	Button btn_login;
+	@BindView(R.id.btn_register)
+	Button btn_register;
+	@BindView(R.id.back)
+	TextView back;
 
 	private LoginContract.presenter mPresenter;
 
@@ -36,11 +42,6 @@ public class LoginActivity extends BaseActivity implements LoginContract.view {
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.login);
-		et_login_user = (EditText) findViewById(R.id.et_login_user);
-		et_login_pwd = (EditText) findViewById(R.id.et_login_pwd);
-		btn_login = (Button) findViewById(R.id.btn_login);
-		btn_register = (Button) findViewById(R.id.btn_register);
-		back = (TextView) findViewById(R.id.back);
 		back.setVisibility(View.INVISIBLE);
 		new LoginPresenter(this, this);
 	}

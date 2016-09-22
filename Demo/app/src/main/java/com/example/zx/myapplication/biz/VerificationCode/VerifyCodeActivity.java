@@ -9,30 +9,33 @@ import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.widget.view.VerifiCodeHepler;
 
+import butterknife.BindView;
+
 /**
  * 验证码
  * Created by ex-zhangxiang on 2016/8/25.
  */
-public class VerifyCodeActivity extends BaseActivity implements VerifyCodeContract.View{
+public class VerifyCodeActivity extends BaseActivity implements VerifyCodeContract.View {
 
-	private EditText mEtVerifyCode;
-	private ImageView mIvVerifyCode;
-	private Button mbtnVerifyCode;
+	@BindView(R.id.et_verify_code)
+	EditText mEtVerifyCode;
+	@BindView(R.id.iv_verify_code)
+	ImageView mIvVerifyCode;
+	@BindView(R.id.btn_verify_code)
+	Button mbtnVerifyCode;
+
 	private VerifyCodeContract.Presenter mPresenter;
 
 	@Override
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.verifycode);
-		mEtVerifyCode = (EditText)findViewById(R.id.et_verify_code);
-		mIvVerifyCode = (ImageView) findViewById(R.id.iv_verify_code);
-		mbtnVerifyCode = (Button) findViewById(R.id.btn_verify_code);
 	}
 
 	@Override
 	protected void initData() {
 		super.initData();
-		VerifyCodePresenter presenter = new VerifyCodePresenter(this,this);
+		VerifyCodePresenter presenter = new VerifyCodePresenter(this, this);
 		mIvVerifyCode.setImageBitmap(VerifiCodeHepler.getInstance().createBitmap());
 	}
 
@@ -46,12 +49,12 @@ public class VerifyCodeActivity extends BaseActivity implements VerifyCodeContra
 	@Override
 	public void onClick(View view) {
 		super.onClick(view);
-		switch (view.getId()){
+		switch (view.getId()) {
 			case R.id.iv_verify_code:  // 刷新验证码
 				mPresenter.refreshVerifyCode(mIvVerifyCode);
 				break;
 			case R.id.btn_verify_code:  // 确认
-				mPresenter.sure(mEtVerifyCode.getText().toString(),VerifiCodeHepler.getInstance().getValue());
+				mPresenter.sure(mEtVerifyCode.getText().toString(), VerifiCodeHepler.getInstance().getValue());
 				break;
 		}
 	}

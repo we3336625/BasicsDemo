@@ -9,15 +9,20 @@ import android.widget.EditText;
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 
+import butterknife.BindView;
+
 /**
  * 打电话
  * Created by ex-zhangxiang on 2016/8/9.
  */
-public class TelephoneActivity extends BaseActivity implements TelephoneContract.View{
+public class TelephoneActivity extends BaseActivity implements TelephoneContract.View {
 
-	private Button mBtnCall;
-	private EditText mEtNumber;
-	TelephoneContract.Presenter mPresenter;
+	@BindView(R.id.telephone_et_number)
+	Button mBtnCall;
+	@BindView(R.id.telephone_btn_call)
+	EditText mEtNumber;
+
+	private TelephoneContract.Presenter mPresenter;
 
 	@Override
 	protected int getLayoutId() {
@@ -28,8 +33,6 @@ public class TelephoneActivity extends BaseActivity implements TelephoneContract
 	protected void findViews() {
 		super.findViews();
 		setTitle(R.string.tele_title);
-		mEtNumber = (EditText) findViewById(R.id.telephone_et_number);
-		mBtnCall = (Button) findViewById(R.id.telephone_btn_call);
 		new TelephonePresenter(this);
 	}
 

@@ -21,14 +21,19 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+
 /**
  * 选择银行卡
  * Created by ex-zhangxiang on 2016/8/30.
  */
 public class BankListActivity extends BaseActivity implements BankListContact.view {
 
-	private ListView mListView;
-	private Button btn_banklist;
+	@BindView(R.id.lv_banklist)
+	ListView mListView;
+	@BindView(R.id.btn_banklist)
+	Button btn_banklist;
+
 	private List<BankCardBean> mList = new ArrayList<BankCardBean>();
 	private BankListAdapter adapter;
 	private BankCardBean bean = new BankCardBean();
@@ -43,8 +48,6 @@ public class BankListActivity extends BaseActivity implements BankListContact.vi
 	@Override
 	protected void findViews() {
 		super.findViews();
-		mListView = (ListView) findViewById(R.id.lv_banklist);
-		btn_banklist = (Button) findViewById(R.id.btn_banklist);
 		setTitle(R.string.selectbank);
 		new BankListPresenter(this, this);
 	}
