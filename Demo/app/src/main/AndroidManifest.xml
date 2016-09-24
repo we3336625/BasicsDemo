@@ -65,8 +65,13 @@
 
         <!-- eventbus -->
         <activity android:name=".biz.eventbus.eventbusfirst.EventBusFirstActivity"/>
-
         <activity android:name=".biz.eventbus.eventbussecond.EventBusSecondActivity"/>
+
+        <!-- rxjava -->
+        <activity android:name=".biz.rxjava.RxJavaActivity"/>
+        <activity android:name=".biz.rxjava.RxJavaHelloWorld.RxJavaHelloWorldActivity"/>
+        <activity android:name=".biz.rxjava.rxjavaoperators.RxJavaOperatorsActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rx_java_operators"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zx.myapplication.biz.rxjava.rxjavaoperators.RxJavaOperatorsActivity">
 
     <include layout="@layout/title_bar"/>
 
@@ -15,76 +19,75 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-
             <Button
-                android:id="@+id/main_sqlite"
+                android:id="@+id/btn_rxjava_op"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sqlite"/>
+                android:text="@string/rxjava_op"/>
 
             <Button
-                android:id="@+id/main_telephone"
+                android:id="@+id/btn_rxjava_op2"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/telephone"/>
+                android:text="@string/rxjava_op2"/>
 
             <Button
-                android:id="@+id/main_sendsms"
+                android:id="@+id/btn_rxjava_op3"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sendsms"/>
+                android:text="@string/rxjava_op3"/>
 
             <Button
-                android:id="@+id/main_filestore"
+                android:id="@+id/btn_rxjava_op4"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/filestore"/>
+                android:text="@string/rxjava_op4"/>
 
             <Button
-                android:id="@+id/main_verify_code"
+                android:id="@+id/btn_rxjava_flatmap"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/verifycode"/>
+                android:text="@string/rxjava_flatmap"/>
 
             <Button
-                android:id="@+id/main_select_bank"
+                android:id="@+id/btn_rxjava_flatmap2"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/selectbank"/>
+                android:text="@string/rxjava_flatmap2"/>
 
             <Button
-                android:id="@+id/main_diary"
+                android:id="@+id/btn_rxjava_flatmap3"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/diary"/>
+                android:text="@string/rxjava_flatmap3"/>
 
             <Button
-                android:id="@+id/main_eventbus"
+                android:id="@+id/btn_rxjava_flatmap4"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/eventbus"/>
+                android:text="@string/rxjava_flatmap4"/>
 
             <Button
-                android:id="@+id/main_rxjava"
+                android:id="@+id/btn_rxjava_flatmap5"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rxjava"/>
+                android:text="@string/rxjava_flatmap5"/>
+
+            <Button
+                android:id="@+id/btn_rxjava_flatmap6"
+                style="@style/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rxjava_flatmap6"/>
         </LinearLayout>
-
     </ScrollView>
-
-
 </LinearLayout>

@@ -11,6 +11,7 @@ import com.example.zx.myapplication.biz.diary.DiaryActivity;
 import com.example.zx.myapplication.biz.eventbus.eventbusfirst.EventBusFirstActivity;
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
 import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
+import com.example.zx.myapplication.biz.rxjava.RxJavaActivity;
 import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
 import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
@@ -42,6 +43,8 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 	Button mBtnDiary;
 	@BindView(R.id.main_eventbus)
 	Button mBtnEventBus;
+	@BindView(R.id.main_rxjava)
+	Button mBtnRxJava;
 
 	private long PRESS_TIME;//双击退出
 
@@ -77,6 +80,7 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 		mBtnSelectBank.setOnClickListener(this);
 		mBtnDiary.setOnClickListener(this);
 		mBtnEventBus.setOnClickListener(this);
+		mBtnRxJava.setOnClickListener(this);
 	}
 
 	@Override
@@ -106,6 +110,9 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 				break;
 			case R.id.main_eventbus:
 				mPresenter.startNetxtActivity(EventBusFirstActivity.class);
+				break;
+			case R.id.main_rxjava:
+				mPresenter.startNetxtActivity(RxJavaActivity.class);
 				break;
 			default:
 				break;
