@@ -2,6 +2,8 @@
 apply plugin: 'com.android.application'
 // butterknife
 apply plugin: 'android-apt'
+// retrolambda
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     // 编译SDK的版本
@@ -19,10 +21,10 @@ android {
     }
 
     // Java版本
-//    compileOptions {
-//        sourceCompatibility JavaVersion.VERSION_1_8
-//        targetCompatibility JavaVersion.VERSION_1_8
-//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     buildTypes {
         release {
@@ -40,7 +42,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
     // eventbus
@@ -52,4 +54,6 @@ dependencies {
     // butterknife
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    // rxjava
+    compile 'io.reactivex:rxjava:1.2.0'
 }
