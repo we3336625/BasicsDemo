@@ -23,5 +23,7 @@ public interface LoginContract {
 		void login(String user, String pwd);
 
 		void register();
+
+		void islogin();
 	}
 }

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
+import com.example.zx.myapplication.biz.convenionbanner.ConvenientBannerActivity;
 import com.example.zx.myapplication.biz.diary.DiaryActivity;
 import com.example.zx.myapplication.biz.eventbus.eventbusfirst.EventBusFirstActivity;
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
@@ -45,6 +46,8 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 	Button mBtnEventBus;
 	@BindView(R.id.main_rxjava)
 	Button mBtnRxJava;
+	@BindView(R.id.main_convenientbanner)
+	Button mBtnConvenientBanner;
 
 	private long PRESS_TIME;//双击退出
 
@@ -81,6 +84,7 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 		mBtnDiary.setOnClickListener(this);
 		mBtnEventBus.setOnClickListener(this);
 		mBtnRxJava.setOnClickListener(this);
+		mBtnConvenientBanner.setOnClickListener(this);
 	}
 
 	@Override
@@ -113,6 +117,9 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 				break;
 			case R.id.main_rxjava:
 				mPresenter.startNetxtActivity(RxJavaActivity.class);
+				break;
+			case R.id.main_convenientbanner:
+				mPresenter.startNetxtActivity(ConvenientBannerActivity.class);
 				break;
 			default:
 				break;

@@ -1,4 +1,4 @@
-package com.example.zx.myapplication.biz.eventbus;
+package com.example.zx.myapplication.biz.eventbus.bean;
 
 /**
  * Created by ex-zhangxiang on 2016/9/21.

@@ -40,6 +40,13 @@ public class LoginPresenter implements LoginContract.presenter {
 	}
 
 	@Override
+	public void islogin() {
+		if (SPUtils.get(mContext, LoginActivity.ISLOGIN, "").equals(LoginActivity.ISLOGIN)) {
+			view.success();
+		}
+	}
+
+	@Override
 	public void start() {
 
 	}
