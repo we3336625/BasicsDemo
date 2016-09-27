@@ -1,6 +1,6 @@
 # BasicsDemo
 
-	SharedPreferences£¨login£©
+	SharedPreferences(login)
 
 	SQLite
 	call phone
