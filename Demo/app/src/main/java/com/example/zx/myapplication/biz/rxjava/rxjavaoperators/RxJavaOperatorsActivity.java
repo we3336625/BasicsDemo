@@ -93,7 +93,7 @@ public class RxJavaOperatorsActivity extends BaseActivity implements RxjavaOpera
 				mPresenter.rxjavaFlatMap5();
 				break;
 			case R.id.btn_rxjava_flatmap6:
-
+				mPresenter.rxjavaFlatMap6();
 				break;
 			default:
 				break;

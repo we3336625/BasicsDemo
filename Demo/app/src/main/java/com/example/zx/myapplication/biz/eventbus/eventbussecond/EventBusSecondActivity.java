@@ -5,7 +5,7 @@ import android.widget.Button;
 
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
-import com.example.zx.myapplication.biz.eventbus.FirstEvent;
+import com.example.zx.myapplication.biz.eventbus.bean.FirstEvent;
 
 import org.greenrobot.eventbus.EventBus;
 

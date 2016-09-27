@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
-import com.example.zx.myapplication.biz.eventbus.FirstEvent;
+import com.example.zx.myapplication.biz.eventbus.bean.FirstEvent;
 import com.example.zx.myapplication.biz.eventbus.eventbussecond.EventBusSecondActivity;
 import com.example.zx.myapplication.utils.LogUtils;
 

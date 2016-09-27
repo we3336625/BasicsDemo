@@ -93,5 +93,7 @@
     <string name="rxjava_flatmap5">flatmap5</string>
     <string name="rxjava_flatmap6">flatmap6</string>
 
+    <string name="convenientbanner">ConvenientBanner</string>
+
     <string name="text_back">返回</string>
 </resources>

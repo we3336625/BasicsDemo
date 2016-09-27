@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rx.Observable;
+import rx.functions.Action1;
 import rx.functions.Func1;
 
 /**
@@ -112,9 +113,18 @@ public class RxJavaOperatorsPresenter implements RxjavaOperatorsContract.present
 				.subscribe(s -> view.showtip(s));
 	}
 
+	/**
+	 * filter: 添加判断，过滤掉那些不满足检查条件的元素
+	 * take：添加输出个数的限制，输出最多指定数量的结果
+	 */
 	@Override
 	public void rxjavaFlatMap6() {
-
+		query("test6")
+				.flatMap(strings -> Observable.from(strings))
+				.flatMap(s -> getTitle(s))
+				.filter(s -> s != null)
+				.take(1)
+				.subscribe(s -> view.showtip(s));
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import com.example.zx.myapplication.R;
 import com.example.zx.myapplication.base.BaseActivity;
 import com.example.zx.myapplication.biz.login.register.RegisterActivity;
 import com.example.zx.myapplication.biz.main.MainActivity;
+import com.example.zx.myapplication.utils.SPUtils;
 
 import butterknife.BindView;
 
@@ -18,6 +19,7 @@ import butterknife.BindView;
  */
 public class LoginActivity extends BaseActivity implements LoginContract.view {
 
+	public static final String ISLOGIN = "islogin";
 	public static final String LOGINUSER = "login";
 	public static final String LOGINPWD = "pwd";
 	@BindView(R.id.et_login_user)
@@ -44,6 +46,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.view {
 		setTitle(R.string.login);
 		back.setVisibility(View.INVISIBLE);
 		new LoginPresenter(this, this);
+		mPresenter.islogin();
 	}
 
 	@Override
@@ -73,6 +76,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.view {
 	@Override
 	public void success() {
 		startNextActivity(MainActivity.class);
+		SPUtils.put(this, ISLOGIN, ISLOGIN);
 		finish();
 	}
 

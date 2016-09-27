@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_convenion_banner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zx.myapplication.biz.convenionbanner.ConvenientBannerActivity">
+
+    <include layout="@layout/title_bar"/>
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/convenientbanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_500_dip"
+        app:canLoop="true"
+        />
+</LinearLayout>

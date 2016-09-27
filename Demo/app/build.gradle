@@ -9,15 +9,15 @@ android {
     // 编译SDK的版本
     compileSdkVersion 24
     // build tools 的版本
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         // 应用的包名
         applicationId "com.example.zx.myapplication"
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
     }
 
     // Java版本
@@ -44,11 +44,9 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     // eventbus
     compile 'org.greenrobot:eventbus:3.0.0'
-    // gson
-    compile 'com.google.code.gson:gson:2.7'
     // logger log打印
     compile 'com.orhanobut:logger:1.15'
     // butterknife
@@ -56,4 +54,7 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     // rxjava
     compile 'io.reactivex:rxjava:1.2.0'
+    // convenientbanner
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+
 }

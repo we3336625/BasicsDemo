@@ -70,8 +70,10 @@
         <!-- rxjava -->
         <activity android:name=".biz.rxjava.RxJavaActivity"/>
         <activity android:name=".biz.rxjava.RxJavaHelloWorld.RxJavaHelloWorldActivity"/>
-        <activity android:name=".biz.rxjava.rxjavaoperators.RxJavaOperatorsActivity">
-        </activity>
+        <activity android:name=".biz.rxjava.rxjavaoperators.RxJavaOperatorsActivity"/>
+
+        <!-- covenionbanner-->
+        <activity android:name=".biz.convenionbanner.ConvenientBannerActivity"/>
     </application>
 
 </manifest>
