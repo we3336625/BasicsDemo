@@ -17,9 +17,9 @@ import butterknife.BindView;
  */
 public class TelephoneActivity extends BaseActivity implements TelephoneContract.View {
 
-	@BindView(R.id.telephone_et_number)
-	Button mBtnCall;
 	@BindView(R.id.telephone_btn_call)
+	Button mBtnCall;
+	@BindView(R.id.telephone_et_number)
 	EditText mEtNumber;
 
 	private TelephoneContract.Presenter mPresenter;

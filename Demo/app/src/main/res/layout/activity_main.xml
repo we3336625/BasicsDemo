@@ -82,12 +82,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/rxjava"/>
+
             <Button
                 android:id="@+id/main_convenientbanner"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/convenientbanner"/>
+
+            <Button
+                android:id="@+id/main_glide"
+                style="@style/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/glide"/>
         </LinearLayout>
 
     </ScrollView>
