@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_glide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zx.myapplication.biz.glide.GlideActivity">
+
+    <include layout="@layout/title_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_glide"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_300_dip"
+        android:layout_gravity="center"
+        android:src="@drawable/icon"/>
+
+    <Button
+        android:id="@+id/btn_glide"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change"
+        android:textAllCaps="true"
+        />
+
+    <Button
+        android:id="@+id/btn_picasso"
+        style="@style/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="picasso"
+        android:textAllCaps="true"/>
+
+</LinearLayout>

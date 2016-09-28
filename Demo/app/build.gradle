@@ -44,17 +44,23 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    // android  support-v4
+    compile 'com.android.support:support-v4:24.2.1'
+    // android  support-v7
     compile 'com.android.support:appcompat-v7:24.2.1'
-    // eventbus
+    // eventbus ---> 针对Android优化的发布/订阅事件总线
     compile 'org.greenrobot:eventbus:3.0.0'
-    // logger log打印
+    // logger ---> log打印
     compile 'com.orhanobut:logger:1.15'
-    // butterknife
+    // butterknife ---> Bindview
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     // rxjava
     compile 'io.reactivex:rxjava:1.2.0'
-    // convenientbanner
+    // convenientbanner ---> 广告头
     compile 'com.bigkoo:convenientbanner:2.0.5'
-
+    // glide ---> 图片加载  默认Bitmap格式是RGB_565
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // picasso ---> 图片加载  默认Bitmap格式是ARGB8888
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

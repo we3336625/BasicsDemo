@@ -72,8 +72,11 @@
         <activity android:name=".biz.rxjava.RxJavaHelloWorld.RxJavaHelloWorldActivity"/>
         <activity android:name=".biz.rxjava.rxjavaoperators.RxJavaOperatorsActivity"/>
 
-        <!-- covenionbanner-->
+        <!-- covenionbanner -->
         <activity android:name=".biz.convenionbanner.ConvenientBannerActivity"/>
+
+        <!-- glide -->
+        <activity android:name=".biz.glide.GlideActivity"/>
     </application>
 
 </manifest>

@@ -95,5 +95,7 @@
 
     <string name="convenientbanner">ConvenientBanner</string>
 
+    <string name="glide">Glide</string>
+
     <string name="text_back">返回</string>
 </resources>
