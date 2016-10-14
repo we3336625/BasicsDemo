@@ -96,6 +96,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/glide"/>
+
+            <Button
+                android:id="@+id/main_download"
+                style="@style/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/download"/>
         </LinearLayout>
 
     </ScrollView>
