@@ -77,6 +77,8 @@
 
         <!-- glide -->
         <activity android:name=".biz.glide.GlideActivity"/>
+
+        <activity android:name=".biz.download.DownLoadActivity"/>
     </application>
 
 </manifest>

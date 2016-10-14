@@ -97,5 +97,7 @@
 
     <string name="glide">Glide</string>
 
+    <string name="download">DownLoad</string>
+
     <string name="text_back">返回</string>
 </resources>

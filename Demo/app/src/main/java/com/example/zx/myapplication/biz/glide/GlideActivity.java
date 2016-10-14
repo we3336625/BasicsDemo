@@ -46,11 +46,13 @@ public class GlideActivity extends BaseActivity {
 			Glide.with(this)
 					.load("http://inthecheesefactory.com/uploads/source/glidepicasso/cover.jpg")
 					.diskCacheStrategy(DiskCacheStrategy.ALL) // 让Glide既缓存全尺寸又缓存其他尺寸
+					.error(R.drawable.icon)
 					.into(iv_glide);
 		} else if (view.getId() == R.id.btn_picasso) {
 			Picasso.with(this)
-					.load("http://e.hiphotos.baidu.com/image/pic/item/c2fdfc039245d6884045b0a9a7c27d1ed21b2473.jpg")
+					.load("http://imgsrc.baidu.com/forum/pic/item/092855affbd2ba5df8dc618f.jpg")
 //					.noFade()
+					.error(R.drawable.icon)
 					.into(iv_glide);
 		}
 	}
