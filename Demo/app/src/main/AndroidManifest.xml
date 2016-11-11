@@ -77,8 +77,11 @@
 
         <!-- glide -->
         <activity android:name=".biz.glide.GlideActivity"/>
-
         <activity android:name=".biz.download.DownLoadActivity"/>
+        <activity android:name=".biz.diary.WriteDiaryActivity"/>
+
+        <!-- XRecycleView -->
+        <activity android:name=".biz.xrecyclerview.XRecyclerViewActivity"/>
     </application>
 
 </manifest>

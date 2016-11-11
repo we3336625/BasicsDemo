@@ -19,6 +19,7 @@ import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
 import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
 import com.example.zx.myapplication.biz.VerificationCode.VerifyCodeActivity;
+import com.example.zx.myapplication.biz.xrecyclerview.XRecyclerViewActivity;
 
 import butterknife.BindView;
 
@@ -54,6 +55,8 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 	Button mBtnGlide;
 	@BindView(R.id.main_download)
 	Button mBtnDownLoad;
+	@BindView(R.id.main_xrecyclerview)
+	Button mBtnXRecyclerView;
 
 	private long PRESS_TIME;//双击退出
 
@@ -93,6 +96,7 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 		mBtnConvenientBanner.setOnClickListener(this);
 		mBtnGlide.setOnClickListener(this);
 		mBtnDownLoad.setOnClickListener(this);
+		mBtnXRecyclerView.setOnClickListener(this);
 	}
 
 	@Override
@@ -134,6 +138,9 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 				break;
 			case R.id.main_download:
 				mPresenter.startNetxtActivity(DownLoadActivity.class);
+				break;
+			case R.id.main_xrecyclerview:
+				mPresenter.startNetxtActivity(XRecyclerViewActivity.class);
 				break;
 			default:
 				break;

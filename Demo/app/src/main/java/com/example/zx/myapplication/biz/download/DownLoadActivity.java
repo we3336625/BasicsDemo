@@ -71,9 +71,9 @@ public class DownLoadActivity extends BaseActivity {
 			case R.id.button_download_single:
 //
 //				//点击通知栏后打开的activity
-////				Intent intent = new Intent(TestAndroid4Activity.this,OtherActivity.class);
-////
-////				PendingIntent pIntent = PendingIntent.getActivity(TestAndroid4Activity.this, 0, intent, 0);
+//				Intent intent = new Intent(TestAndroid4Activity.this,OtherActivity.class);
+//
+//				PendingIntent pIntent = PendingIntent.getActivity(TestAndroid4Activity.this, 0, intent, 0);
 //				manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 //				notif = new Notification();
 //				notif.icon = R.drawable.icon;
@@ -85,6 +85,7 @@ public class DownLoadActivity extends BaseActivity {
 //				new SingleDownloadTask().execute();
 
 				UpdateBuilder.create()
+						.url("http://www.baidu.com")// 随便模拟的一个网络接口。
 						.checkCB(new UpdateCheckCB() {
 
 							// 更新检查错误的回调
