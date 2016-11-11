@@ -38,7 +38,6 @@ public class MyApplication extends Application {
 
 		// Application中对Config进行配置
 		UpdateConfig.getConfig()
-				.url("http://www.baidu.com")// 随便模拟的一个网络接口。
 				;
 	}
 

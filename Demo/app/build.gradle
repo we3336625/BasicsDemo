@@ -71,4 +71,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
 
     compile 'org.lzh.nonview.updateplugin:UpdatePlugin:0.7.1'
+    // xrecyclerview
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+    // okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.4.2'
 }
