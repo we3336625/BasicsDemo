@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/title_bar"/>
+    <include layout="@layout/title_bar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,99 +17,111 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/main_sqlite"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sqlite"/>
+                android:text="@string/sqlite" />
 
             <Button
                 android:id="@+id/main_telephone"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/telephone"/>
+                android:text="@string/telephone" />
 
             <Button
                 android:id="@+id/main_sendsms"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sendsms"/>
+                android:text="@string/sendsms" />
 
             <Button
                 android:id="@+id/main_filestore"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/filestore"/>
+                android:text="@string/filestore" />
 
             <Button
                 android:id="@+id/main_verify_code"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/verifycode"/>
+                android:text="@string/verifycode" />
 
             <Button
                 android:id="@+id/main_select_bank"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/selectbank"/>
+                android:text="@string/selectbank" />
 
             <Button
                 android:id="@+id/main_diary"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/diary"/>
+                android:text="@string/diary" />
 
             <Button
                 android:id="@+id/main_eventbus"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/eventbus"/>
+                android:text="@string/eventbus" />
 
             <Button
                 android:id="@+id/main_rxjava"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/rxjava"/>
+                android:text="@string/rxjava" />
 
             <Button
                 android:id="@+id/main_convenientbanner"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/convenientbanner"/>
+                android:text="@string/convenientbanner" />
 
             <Button
                 android:id="@+id/main_glide"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/glide"/>
+                android:text="@string/glide" />
 
             <Button
                 android:id="@+id/main_download"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/download"/>
+                android:text="@string/download" />
 
             <Button
                 android:id="@+id/main_xrecyclerview"
                 style="@style/main_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="XRecyclerView"/>
+                android:text="@string/x_recycler_view" />
+
+            <Button
+                android:id="@+id/main_custom_view"
+                style="@style/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_view" />
+            <Button
+                android:id="@+id/main_retrofit"
+                style="@style/main_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/retrofit" />
         </LinearLayout>
 
     </ScrollView>

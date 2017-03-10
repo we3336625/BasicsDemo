@@ -2,7 +2,6 @@ package com.example.zx.myapplication.biz.main;
 
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.zx.myapplication.R;
@@ -14,14 +13,16 @@ import com.example.zx.myapplication.biz.eventbus.eventbusfirst.EventBusFirstActi
 import com.example.zx.myapplication.biz.filestore.FileStoreActivity;
 import com.example.zx.myapplication.biz.SQLite.SQLiteActivity;
 import com.example.zx.myapplication.biz.glide.GlideActivity;
+import com.example.zx.myapplication.biz.retrofit.RetrofitActivity;
 import com.example.zx.myapplication.biz.rxjava.RxJavaActivity;
 import com.example.zx.myapplication.biz.selectbank.SelectBankActivity;
 import com.example.zx.myapplication.biz.sendsms.SendSMSActivity;
 import com.example.zx.myapplication.biz.Telephone.TelephoneActivity;
 import com.example.zx.myapplication.biz.VerificationCode.VerifyCodeActivity;
 import com.example.zx.myapplication.biz.xrecyclerview.XRecyclerViewActivity;
+import com.example.zx.myapplication.biz.custom_view.CustomViewActivity;
 
-import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * 主界面
@@ -30,33 +31,6 @@ import butterknife.BindView;
 public class MainActivity extends BaseActivity implements MainContract.view {
 
 	public static final String TAG = "MainActivity";
-
-	@BindView(R.id.main_sqlite)
-	Button mBtnSQLite;
-	@BindView(R.id.main_telephone)
-	Button mBtnTelephonoe;
-	@BindView(R.id.main_sendsms)
-	Button mBtnSendSMS;
-	@BindView(R.id.main_filestore)
-	Button mBtnFileStore;
-	@BindView(R.id.main_verify_code)
-	Button mBtnVerifyCode;
-	@BindView(R.id.main_select_bank)
-	Button mBtnSelectBank;
-	@BindView(R.id.main_diary)
-	Button mBtnDiary;
-	@BindView(R.id.main_eventbus)
-	Button mBtnEventBus;
-	@BindView(R.id.main_rxjava)
-	Button mBtnRxJava;
-	@BindView(R.id.main_convenientbanner)
-	Button mBtnConvenientBanner;
-	@BindView(R.id.main_glide)
-	Button mBtnGlide;
-	@BindView(R.id.main_download)
-	Button mBtnDownLoad;
-	@BindView(R.id.main_xrecyclerview)
-	Button mBtnXRecyclerView;
 
 	private long PRESS_TIME;//双击退出
 
@@ -84,22 +58,25 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 	@Override
 	protected void setupListeners() {
 		super.setupListeners();
-		mBtnSQLite.setOnClickListener(this);
-		mBtnTelephonoe.setOnClickListener(this);
-		mBtnSendSMS.setOnClickListener(this);
-		mBtnFileStore.setOnClickListener(this);
-		mBtnVerifyCode.setOnClickListener(this);
-		mBtnSelectBank.setOnClickListener(this);
-		mBtnDiary.setOnClickListener(this);
-		mBtnEventBus.setOnClickListener(this);
-		mBtnRxJava.setOnClickListener(this);
-		mBtnConvenientBanner.setOnClickListener(this);
-		mBtnGlide.setOnClickListener(this);
-		mBtnDownLoad.setOnClickListener(this);
-		mBtnXRecyclerView.setOnClickListener(this);
 	}
 
-	@Override
+	@OnClick({
+			R.id.main_sqlite,
+			R.id.main_telephone,
+			R.id.main_sendsms,
+			R.id.main_filestore,
+			R.id.main_verify_code,
+			R.id.main_select_bank,
+			R.id.main_diary,
+			R.id.main_eventbus,
+			R.id.main_rxjava,
+			R.id.main_convenientbanner,
+			R.id.main_glide,
+			R.id.main_download,
+			R.id.main_xrecyclerview,
+			R.id.main_custom_view,
+			R.id.main_retrofit
+	})
 	public void onClick(View view) {
 		super.onClick(view);
 		switch (view.getId()) {
@@ -141,6 +118,12 @@ public class MainActivity extends BaseActivity implements MainContract.view {
 				break;
 			case R.id.main_xrecyclerview:
 				mPresenter.startNetxtActivity(XRecyclerViewActivity.class);
+				break;
+			case R.id.main_custom_view:
+				mPresenter.startNetxtActivity(CustomViewActivity.class);
+				break;
+			case R.id.main_retrofit:
+				mPresenter.startNetxtActivity(RetrofitActivity.class);
 				break;
 			default:
 				break;

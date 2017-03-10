@@ -93,11 +93,22 @@
     <string name="rxjava_flatmap5">flatmap5</string>
     <string name="rxjava_flatmap6">flatmap6</string>
 
+    <!-- retrofit -->
+    <string name="retrofit">retrofit</string>
+    <string name="retrofit_query">retrofit_query</string>
+    <string name="retrofit_query_map">retrofit_query_map</string>
+    <string name="retrofit_path">retrofit_path</string>
+    <string name="retrofit_field_map">retrofit_field_map</string>
+
     <string name="convenientbanner">ConvenientBanner</string>
 
     <string name="glide">Glide</string>
 
     <string name="download">DownLoad</string>
+
+    <string name="x_recycler_view">XRecyclerView</string>
+
+    <string name="custom_view">CustomView</string>
 
     <string name="text_back">返回</string>
 </resources>

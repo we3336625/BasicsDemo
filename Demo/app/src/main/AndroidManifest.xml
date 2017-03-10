@@ -82,6 +82,10 @@
 
         <!-- XRecycleView -->
         <activity android:name=".biz.xrecyclerview.XRecyclerViewActivity"/>
+
+        <activity android:name=".biz.custom_view.CustomViewActivity"/>
+        <!-- retrofit -->
+        <activity android:name=".biz.retrofit.RetrofitActivity"/>
     </application>
 
 </manifest>

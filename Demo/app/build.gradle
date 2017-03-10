@@ -7,15 +7,15 @@ apply plugin: 'me.tatarka.retrolambda'
 
 android {
     // 编译SDK的版本
-    compileSdkVersion 24
+    compileSdkVersion 25
     // build tools 的版本
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         // 应用的包名
         applicationId "com.example.zx.myapplication"
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion 15
+        targetSdkVersion 25
         versionCode 100
         versionName "1.0.0"
     }
@@ -45,9 +45,9 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     // android  support-v4
-    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v4:25.2.0'
     // android  support-v7
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.2.0'
     // eventbus ---> 针对Android优化的发布/订阅事件总线
     compile 'org.greenrobot:eventbus:3.0.0'
     // logger ---> log打印
@@ -64,15 +64,15 @@ dependencies {
     // picasso ---> 图片加载  默认Bitmap格式是ARGB8888
     compile 'com.squareup.picasso:picasso:2.5.2'
     // retrofit2.0
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
     // okhttp3.0
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'org.lzh.nonview.updateplugin:UpdatePlugin:0.7.1'
     // xrecyclerview
     compile 'com.jcodecraeer:xrecyclerview:1.2.7'
     // okhttp
     compile 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }
