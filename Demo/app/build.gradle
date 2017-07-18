@@ -9,7 +9,7 @@ android {
     // 编译SDK的版本
     compileSdkVersion 24
     // build tools 的版本
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         // 应用的包名
