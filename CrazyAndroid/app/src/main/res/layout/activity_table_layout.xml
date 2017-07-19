@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zx.crazyandroid.biz.TableLayoutActivity">
+
+    <!-- 第2列 收缩  第3列 拉伸 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:stretchColumns="2">
+
+        <Button android:text="第2列收缩  第3列拉伸" />
+
+        <TableRow>
+
+            <Button android:text="1" />
+
+            <Button android:text="2" />
+
+            <Button android:text="3" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 隐藏第二列 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:collapseColumns="1">
+
+        <Button android:text="隐藏第二列" />
+
+        <TableRow>
+
+            <Button android:text="1" />
+
+            <Button android:text="2" />
+
+            <Button android:text="3" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 第2，3列 拉伸 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2">
+
+        <Button android:text="第2，3列 拉伸" />
+
+        <TableRow>
+
+            <Button android:text="1" />
+
+            <Button android:text="2" />
+
+            <Button android:text="3" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button android:text="1" />
+
+            <Button android:text="2" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
