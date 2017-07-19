@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    tools:context="com.zx.crazyandroid.biz.FrameLayoutActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:background="#f00" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:background="#0f0" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:background="#00f" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="#ff0" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:background="#f0f" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="#0ff" />
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="#fff" />
+</FrameLayout>
