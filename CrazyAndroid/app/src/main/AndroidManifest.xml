@@ -15,7 +15,8 @@
         <activity android:name=".biz.TableLayoutActivity" />
         <activity android:name=".biz.FrameLayoutActivity" />
         <activity android:name=".biz.ToggleSwitchActivity" />
-        <activity android:name=".biz.ClockActivity">
+        <activity android:name=".biz.ClockActivity" />
+        <activity android:name=".biz.ImageViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
