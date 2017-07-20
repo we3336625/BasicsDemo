@@ -11,9 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".biz.MainActivity" />
         <activity android:name=".biz.CodeViewActivity" />
-        <activity android:name=".biz.CustomViewActivity"/>
-        <activity android:name=".biz.TableLayoutActivity"/>
-        <activity android:name=".biz.FrameLayoutActivity">
+        <activity android:name=".biz.CustomViewActivity" />
+        <activity android:name=".biz.TableLayoutActivity" />
+        <activity android:name=".biz.FrameLayoutActivity" />
+        <activity android:name=".biz.ToggleSwitchActivity" />
+        <activity android:name=".biz.ClockActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
