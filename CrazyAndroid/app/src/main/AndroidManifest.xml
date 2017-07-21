@@ -30,8 +30,10 @@
         <activity android:name=".biz.ListViewActivity" />
         <!-- 自动补全textView -->
         <activity android:name=".biz.AutoCompleteActivity" />
-        <!--GridView 点击item放大图片-->
+        <!-- GridView 点击item放大图片 -->
         <activity android:name=".biz.GridViewActivity" />
+        <!-- 可展开的列表组件 -->
+        <activity android:name=".biz.ExpandableListViewActivity" />
     </application>
 
 </manifest>
