@@ -10,6 +10,9 @@ import android.widget.ImageView;
 
 import com.zx.crazyandroid.R;
 
+/**
+ * imageView 透明度 增加；减少；下一张， 局部放大
+ */
 public class ImageViewActivity extends BaseActivity implements View.OnClickListener {
 
     private Button btn_plus,btn_minus,btn_next;

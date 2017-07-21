@@ -17,6 +17,9 @@ import com.zx.crazyandroid.R;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * frameLayout 重叠效果
+ */
 public class FrameLayoutActivity extends BaseActivity {
 
     int currentColor = 0;

@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.zx.crazyandroid.R;
 
+/**
+ * tableLayout 应用
+ */
 public class TableLayoutActivity extends AppCompatActivity {
 
     @Override

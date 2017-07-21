@@ -8,6 +8,9 @@ import android.widget.Chronometer;
 
 import com.zx.crazyandroid.R;
 
+/**
+ * 时钟 计时器
+ */
 public class ClockActivity extends BaseActivity {
 
     @Override
