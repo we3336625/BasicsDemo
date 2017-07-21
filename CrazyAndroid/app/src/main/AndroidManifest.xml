@@ -34,6 +34,8 @@
         <activity android:name=".biz.GridViewActivity" />
         <!-- 可展开的列表组件 -->
         <activity android:name=".biz.ExpandableListViewActivity" />
+        <!-- spinner: xml 通过entries设置数据   java setAdapter -->
+        <activity android:name=".biz.SpinnerActivity" />
     </application>
 
 </manifest>
