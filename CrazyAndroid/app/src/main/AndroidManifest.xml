@@ -9,26 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--xml  与  java 代码 共同控制UI-->
+
+        <!-- xml  与  java 代码 共同控制UI -->
         <activity android:name=".biz.MainActivity" />
-        <!--java 代码 写UI-->
+        <!-- java 代码 写UI -->
         <activity android:name=".biz.CodeViewActivity" />
-        <!--自定义view 跟随手机动的红色circle-->
+        <!-- 自定义view 跟随手机动的红色circle -->
         <activity android:name=".biz.CustomViewActivity" />
-        <!--tableLayout 应用-->
+        <!-- tableLayout 应用 -->
         <activity android:name=".biz.TableLayoutActivity" />
-        <!--frameLayout 重叠效果-->
+        <!-- frameLayout 重叠效果 -->
         <activity android:name=".biz.FrameLayoutActivity" />
-        <!--开关 更改linearLayout orientation-->
+        <!-- 开关 更改linearLayout orientation -->
         <activity android:name=".biz.ToggleSwitchActivity" />
-        <!--时钟 计时器-->
+        <!-- 时钟 计时器 -->
         <activity android:name=".biz.ClockActivity" />
-        <!--imageView-->
+        <!-- imageView -->
         <activity android:name=".biz.ImageViewActivity" />
-        <!--listView-->
+        <!-- listView -->
         <activity android:name=".biz.ListViewActivity" />
-        <!--自动补全textView-->
+        <!-- 自动补全textView -->
         <activity android:name=".biz.AutoCompleteActivity" />
+        <!--GridView 点击item放大图片-->
+        <activity android:name=".biz.GridViewActivity" />
     </application>
 
 </manifest>
