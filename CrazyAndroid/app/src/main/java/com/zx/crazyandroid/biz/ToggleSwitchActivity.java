@@ -8,6 +8,9 @@ import android.widget.ToggleButton;
 
 import com.zx.crazyandroid.R;
 
+/**
+ * 开关 更改linearLayout orientation
+ */
 public class ToggleSwitchActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
     private ToggleButton toggle;
     private Switch switch_btn;

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.zx.crazyandroid.R;
 
 /**
- * 跟随手机动的红色circle
+ * 自定义view 跟随手机动的红色circle
  */
 public class CustomViewActivity extends BaseActivity {
 
