@@ -38,6 +38,8 @@
         <activity android:name=".biz.SpinnerActivity" />
         <!-- AdapterViewFlipper 实现自动播放图片 -->
         <activity android:name=".biz.AdapterViewFlipperActivity" />
+        <!-- StackView 叠在一起的图片 -->
+        <activity android:name=".biz.StackViewActivity" />
     </application>
 
 </manifest>
