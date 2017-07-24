@@ -40,6 +40,12 @@
         <activity android:name=".biz.AdapterViewFlipperActivity" />
         <!-- StackView 叠在一起的图片 -->
         <activity android:name=".biz.StackViewActivity" />
+        <!-- progressBar 使用 -->
+        <activity android:name=".biz.ProgressBarActivity" />
+        <!-- seekBar  控制图片透明度 -->
+        <activity android:name=".biz.SeekBarActivity" />
+        <!-- ViewSwitcher 实现仿android系统launcher界面 -->
+        <activity android:name=".biz.ViewSwitcherActivity" />
     </application>
 
 </manifest>
