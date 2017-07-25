@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.GridViewActivity">
+    tools:context=".biz.view.view_group.adapter_view.abs_list_view.grid_view.GridViewActivity">
 
     <GridView
         android:id="@+id/grid_view"

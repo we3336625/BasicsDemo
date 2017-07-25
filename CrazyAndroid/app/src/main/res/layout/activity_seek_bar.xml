@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.SeekBarActivity">
+    tools:context=".biz.view.progress_bar.abs_seek_bar.rating_bar.SeekBarActivity">
 
     <ImageView
         android:id="@+id/image"

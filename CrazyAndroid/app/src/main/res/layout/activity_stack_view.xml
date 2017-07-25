@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.StackViewActivity">
+    tools:context=".biz.view.view_group.adapter_view.adapter_view_animator.stack_view.StackViewActivity">
 
     <!-- loopViews 是否循环播放-->
     <StackView

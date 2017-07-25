@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zx.crazyandroid.biz.view.view_group.frame_layout.view_animator.view_switcher.image_switcher.ImageSwitcherActivity">
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dip"
+        android:verticalSpacing="5dip"
+        android:numColumns="4" />
+
+    <ImageSwitcher
+        android:id="@+id/image_switcher"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

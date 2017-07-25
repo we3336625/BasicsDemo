@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.SpinnerActivity">
+    tools:context=".biz.view.view_group.adapter_view.abs_spinner.spinner.SpinnerActivity">
 
     <Spinner
         android:layout_width="match_parent"

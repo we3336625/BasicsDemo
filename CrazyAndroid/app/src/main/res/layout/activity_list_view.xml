@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zx.crazyandroid.biz.ListViewActivity">
+    tools:context=".biz.view.view_group.adapter_view.abs_list_view.list_view.ListViewActivity">
 
 </ListView>

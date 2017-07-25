@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.AdapterViewFlipperActivity">
+    tools:context=".biz.view.view_group.adapter_view.adapter_view_animator.adapter_view_flipper.AdapterViewFlipperActivity">
 
     <AdapterViewFlipper
         android:id="@+id/adapter_view_flipper"
