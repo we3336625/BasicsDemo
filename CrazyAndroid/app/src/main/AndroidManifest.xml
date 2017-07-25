@@ -56,6 +56,10 @@
         <activity android:name=".biz.toast.ToastActivity" />
         <!-- calendarView 选择日期 -->
         <activity android:name=".biz.view.view_group.frame_layout.calendar_view.CalendarViewActivity" />
+        <!-- datePicker 日期选择器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.date_picker.DatePickerActivity" />
+        <!-- timePicker  时间选择器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.time_picker.TimePickerActivity" />
     </application>
 
 </manifest>
