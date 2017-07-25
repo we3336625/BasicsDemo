@@ -54,6 +54,8 @@
         <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_flipper.ViewFlipperActivity" />
         <!-- Toast 带图片的消息提示 -->
         <activity android:name=".biz.toast.ToastActivity" />
+        <!-- calendarView 选择日期 -->
+        <activity android:name=".biz.view.view_group.frame_layout.calendar_view.CalendarViewActivity" />
     </application>
 
 </manifest>
