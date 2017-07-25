@@ -1,11 +1,4 @@
-/*
- *
- *  * 乡邻小站
- *  *   *Copyright (c) 2017 XiangLin,Inc.All Rights Reserved.
- *
- */
-
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.frame_layout;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +6,7 @@ import android.os.Message;
 import android.widget.TextView;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 import java.util.Timer;
 import java.util.TimerTask;

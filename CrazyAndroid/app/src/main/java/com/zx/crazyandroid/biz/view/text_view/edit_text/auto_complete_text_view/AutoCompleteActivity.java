@@ -1,4 +1,4 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.text_view.edit_text.auto_complete_text_view;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -6,8 +6,11 @@ import android.widget.AutoCompleteTextView;
 import android.widget.MultiAutoCompleteTextView;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
-
+/**
+ * 自动补全textView
+ */
 public class AutoCompleteActivity extends BaseActivity {
     private AutoCompleteTextView auto_complete;
     private MultiAutoCompleteTextView multi_auto_complete;

@@ -1,4 +1,4 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.text_view.text_clock;
 
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Chronometer;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
  * 时钟 计时器

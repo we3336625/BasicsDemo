@@ -1,4 +1,4 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.adapter_view.abs_list_view.list_view.expandable_list_view;
 
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
  * 可展开的列表组件

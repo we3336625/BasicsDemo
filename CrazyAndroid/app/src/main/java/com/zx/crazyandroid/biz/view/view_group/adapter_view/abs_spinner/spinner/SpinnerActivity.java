@@ -1,10 +1,11 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.adapter_view.abs_spinner.spinner;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
  * spinner: xml 通过entries设置数据

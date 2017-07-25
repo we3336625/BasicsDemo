@@ -1,10 +1,3 @@
-/*
- *
- *  * 乡邻小站
- *  *   *Copyright (c) 2017 XiangLin,Inc.All Rights Reserved.
- *
- */
-
 package com.zx.crazyandroid.biz;
 
 import android.support.v7.app.AppCompatActivity;
@@ -17,5 +10,5 @@ import android.support.v7.app.AppCompatActivity;
  * @email ex-zhangxiang@xianglin.cn
  */
 public class BaseActivity extends AppCompatActivity {
-    String TAG = this.getClass().getSimpleName();
+    protected String TAG = this.getClass().getSimpleName();
 }

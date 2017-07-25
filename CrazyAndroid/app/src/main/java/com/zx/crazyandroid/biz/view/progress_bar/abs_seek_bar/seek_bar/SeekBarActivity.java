@@ -1,10 +1,11 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.progress_bar.abs_seek_bar.seek_bar;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
  * seekBar  控制图片透明度

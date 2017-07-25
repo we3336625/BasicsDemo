@@ -1,24 +1,17 @@
-/*
- *
- *  * 乡邻小站
- *  *   *Copyright (c) 2017 XiangLin,Inc.All Rights Reserved.
- *
- */
-
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.adapter_view.abs_list_view.list_view;
 
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 public class ListViewActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.text_view.button.compound_button;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -7,6 +7,7 @@ import android.widget.Switch;
 import android.widget.ToggleButton;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
  * 开关 更改linearLayout orientation

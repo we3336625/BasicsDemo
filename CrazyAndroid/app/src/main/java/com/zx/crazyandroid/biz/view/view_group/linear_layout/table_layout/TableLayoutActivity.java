@@ -1,4 +1,4 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.linear_layout.table_layout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

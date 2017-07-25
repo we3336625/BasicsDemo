@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.TableLayoutActivity">
+    tools:context=".biz.view.view_group.linear_layout.table_layout.TableLayoutActivity">
 
     <!-- 第2列 收缩  第3列 拉伸 -->
     <TableLayout

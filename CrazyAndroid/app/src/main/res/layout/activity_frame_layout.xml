@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#cccccc"
-    tools:context="com.zx.crazyandroid.biz.FrameLayoutActivity">
+    tools:context=".biz.view.view_group.frame_layout.FrameLayoutActivity">
 
     <TextView
         android:id="@+id/tv1"

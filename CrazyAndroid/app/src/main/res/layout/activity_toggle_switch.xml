@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zx.crazyandroid.biz.ToggleSwitchActivity">
+    tools:context=".biz.view.text_view.button.compound_button.ToggleSwitchActivity">
 
     <ToggleButton
         android:id="@+id/toggle_btn"

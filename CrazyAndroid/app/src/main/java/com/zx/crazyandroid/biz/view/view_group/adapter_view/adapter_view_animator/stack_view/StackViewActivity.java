@@ -1,20 +1,23 @@
-package com.zx.crazyandroid.biz;
+package com.zx.crazyandroid.biz.view.view_group.adapter_view.adapter_view_animator.stack_view;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterViewFlipper;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.StackView;
 
 import com.zx.crazyandroid.R;
+import com.zx.crazyandroid.biz.BaseActivity;
 
 /**
- * AdapterViewFlipper 实现自动播放图片
+ * StackView 叠在一起的图片
  */
-public class AdapterViewFlipperActivity extends BaseActivity {
+public class StackViewActivity extends BaseActivity {
 
-    private int[] images = new int[]{
+    private StackView stackView;
+
+    private int[] images = new int[] {
             R.drawable.bg1,
             R.drawable.bg2,
             R.drawable.bg3,
@@ -23,14 +26,12 @@ public class AdapterViewFlipperActivity extends BaseActivity {
             R.drawable.bg6
     };
 
-    private AdapterViewFlipper adapterViewFlipper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adapter_view_flipper);
-        adapterViewFlipper = (AdapterViewFlipper) findViewById(R.id.adapter_view_flipper);
-        adapterViewFlipper.setAdapter(new BaseAdapter() {
+        setContentView(R.layout.activity_stack_view);
+        stackView = (StackView) findViewById(R.id.stack_view);
+        stackView.setAdapter(new BaseAdapter() {
             @Override
             public int getCount() {
                 return images.length;
@@ -48,33 +49,18 @@ public class AdapterViewFlipperActivity extends BaseActivity {
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                ImageView imageView = new ImageView(AdapterViewFlipperActivity.this);
+                ImageView imageView = new ImageView(StackViewActivity.this);
                 imageView.setImageResource(images[position]);
                 return imageView;
             }
         });
     }
 
-    /**
-     * 上一张
-     */
-    public void prev(View view) {
-        adapterViewFlipper.stopFlipping();
-        adapterViewFlipper.showPrevious();
+    public void stack_prev(View view) {
+        stackView.showPrevious();
     }
 
-    /**
-     * 下一张
-     */
-    public void next(View view) {
-        adapterViewFlipper.stopFlipping();
-        adapterViewFlipper.showNext();
-    }
-
-    /**
-     * 自动播放
-     */
-    public void auto(View view) {
-        adapterViewFlipper.startFlipping();
+    public void stack_next(View view) {
+        stackView.showNext();
     }
 }
