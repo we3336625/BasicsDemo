@@ -48,6 +48,8 @@
         <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.ViewSwitcherActivity" />
         <!-- imageSwitcher 支持动画的图片浏览 -->
         <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.image_switcher.ImageSwitcherActivity" />
+        <!-- textSwitcher 文本切换器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.text_switcher.TextSwitcherActivity" />
     </application>
 
 </manifest>
