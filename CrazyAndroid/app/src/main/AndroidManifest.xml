@@ -46,6 +46,8 @@
         <activity android:name=".biz.view.progress_bar.abs_seek_bar.seek_bar.SeekBarActivity" />
         <!-- ViewSwitcher 实现仿android系统launcher界面 -->
         <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.ViewSwitcherActivity" />
+        <!-- imageSwitcher 支持动画的图片浏览 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.image_switcher.ImageSwitcherActivity" />
     </application>
 
 </manifest>
