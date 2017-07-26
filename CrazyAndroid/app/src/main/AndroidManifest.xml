@@ -60,6 +60,8 @@
         <activity android:name=".biz.view.view_group.frame_layout.date_picker.DatePickerActivity" />
         <!-- timePicker  时间选择器 -->
         <activity android:name=".biz.view.view_group.frame_layout.time_picker.TimePickerActivity" />
+        <!-- numberPicker  数字选择器 -->
+        <activity android:name=".biz.view.view_group.linear_layout.number_picker.NumberPickerActivity" />
     </application>
 
 </manifest>
