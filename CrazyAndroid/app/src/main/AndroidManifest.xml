@@ -62,6 +62,8 @@
         <activity android:name=".biz.view.view_group.frame_layout.time_picker.TimePickerActivity" />
         <!-- numberPicker  数字选择器 -->
         <activity android:name=".biz.view.view_group.linear_layout.number_picker.NumberPickerActivity" />
+        <!-- searchView  搜索 -->
+        <activity android:name=".biz.view.view_group.linear_layout.search_view.SearchViewActivity" />
     </application>
 
 </manifest>
