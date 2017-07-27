@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DatePicker xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/datePicker"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.zx.crazyandroid.biz.view.view_group.frame_layout.date_picker.DatePickerActivity">
-
-</DatePicker>
