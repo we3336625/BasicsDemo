@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zx.android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- xml  与  java 代码 共同控制UI -->
+        <activity android:name=".biz.MainActivity" />
+        <!-- java 代码 写UI -->
+        <activity android:name=".biz.CodeViewActivity" />
+        <!-- 自定义view 跟随手机动的红色circle -->
+        <activity android:name=".biz.view.CustomViewActivity" />
+        <!-- tableLayout 应用 -->
+        <activity android:name=".biz.view.view_group.linear_layout.table_layout.TableLayoutActivity" />
+        <!-- frameLayout 重叠效果 -->
+        <activity android:name=".biz.view.view_group.frame_layout.FrameLayoutActivity" />
+        <!-- 开关 更改linearLayout orientation -->
+        <activity android:name=".biz.view.text_view.button.compound_button.ToggleSwitchActivity" />
+        <!-- 时钟 计时器 -->
+        <activity android:name=".biz.view.text_view.text_clock.ClockActivity" />
+        <!-- imageView -->
+        <activity android:name=".biz.view.image_view.ImageViewActivity" />
+        <!-- listView -->
+        <activity android:name=".biz.view.view_group.adapter_view.abs_list_view.list_view.ListViewActivity" />
+        <!-- 自动补全textView -->
+        <activity android:name=".biz.view.text_view.edit_text.auto_complete_text_view.AutoCompleteActivity" />
+        <!-- GridView 点击item放大图片 -->
+        <activity android:name=".biz.view.view_group.adapter_view.abs_list_view.grid_view.GridViewActivity" />
+        <!-- 可展开的列表组件 -->
+        <activity android:name=".biz.view.view_group.adapter_view.abs_list_view.list_view.expandable_list_view.ExpandableListViewActivity" />
+        <!-- spinner: xml 通过entries设置数据   java setAdapter -->
+        <activity android:name=".biz.view.view_group.adapter_view.abs_spinner.spinner.SpinnerActivity" />
+        <!-- AdapterViewFlipper 实现自动播放图片 -->
+        <activity android:name=".biz.view.view_group.adapter_view.adapter_view_animator.adapter_view_flipper.AdapterViewFlipperActivity" />
+        <!-- StackView 叠在一起的图片 -->
+        <activity android:name=".biz.view.view_group.adapter_view.adapter_view_animator.stack_view.StackViewActivity" />
+        <!-- progressBar 使用 -->
+        <activity android:name=".biz.view.progress_bar.progress_bar.ProgressBarActivity" />
+        <!-- seekBar  控制图片透明度 -->
+        <activity android:name=".biz.view.progress_bar.abs_seek_bar.seek_bar.SeekBarActivity" />
+        <!-- ViewSwitcher 实现仿android系统launcher界面 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.ViewSwitcherActivity" />
+        <!-- imageSwitcher 支持动画的图片浏览 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.image_switcher.ImageSwitcherActivity" />
+        <!-- textSwitcher 文本切换器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_switcher.text_switcher.TextSwitcherActivity" />
+        <!-- viewFlipper 自动播放的图片库 -->
+        <activity android:name=".biz.view.view_group.frame_layout.view_animator.view_flipper.ViewFlipperActivity" />
+        <!-- Toast 带图片的消息提示 -->
+        <activity android:name=".biz.toast.ToastActivity" />
+        <!-- calendarView 选择日期 -->
+        <activity android:name=".biz.view.view_group.frame_layout.calendar_view.CalendarViewActivity" />
+        <!-- datePicker 日期选择器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.date_picker.DatePickerActivity" />
+        <!-- timePicker  时间选择器 -->
+        <activity android:name=".biz.view.view_group.frame_layout.time_picker.TimePickerActivity" />
+        <!-- numberPicker  数字选择器 -->
+        <activity android:name=".biz.view.view_group.linear_layout.number_picker.NumberPickerActivity" />
+        <!-- searchView  搜索 -->
+        <activity android:name=".biz.view.view_group.linear_layout.search_view.SearchViewActivity" />
+        <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
