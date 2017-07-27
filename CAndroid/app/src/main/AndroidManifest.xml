@@ -66,6 +66,8 @@
         <activity android:name=".biz.view.view_group.linear_layout.search_view.SearchViewActivity" />
         <!-- 选项卡 TabHost -->
         <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity" />
+        <!-- ScrollView 最多包含一个组件，作用：为该组件添加垂直滚动条 -->
+        <activity android:name=".biz.view.view_group.frame_layout.scroll_view.ScrollViewActivity" />
     </application>
 
 </manifest>
