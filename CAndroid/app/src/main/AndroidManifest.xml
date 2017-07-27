@@ -64,13 +64,8 @@
         <activity android:name=".biz.view.view_group.linear_layout.number_picker.NumberPickerActivity" />
         <!-- searchView  搜索 -->
         <activity android:name=".biz.view.view_group.linear_layout.search_view.SearchViewActivity" />
-        <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- 选项卡 TabHost -->
+        <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity" />
     </application>
 
 </manifest>
