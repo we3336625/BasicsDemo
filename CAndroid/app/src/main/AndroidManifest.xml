@@ -73,8 +73,11 @@
         <!-- AlertDialog 创建对话框 -->
         <activity android:name=".biz.alert_dialog.AlertDialogActivity" />
         <!-- 对话框风格的窗口 -->
-        <activity android:name=".biz.alert_dialog.DialogThemeActivity"
+        <activity
+            android:name=".biz.alert_dialog.DialogThemeActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
+        <!-- popupWindow 使用 -->
+        <activity android:name=".biz.popup_window.PopupWindowActivity" />
     </application>
 
 </manifest>
