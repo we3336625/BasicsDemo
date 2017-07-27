@@ -64,13 +64,20 @@
         <activity android:name=".biz.view.view_group.linear_layout.number_picker.NumberPickerActivity" />
         <!-- searchView  搜索 -->
         <activity android:name=".biz.view.view_group.linear_layout.search_view.SearchViewActivity" />
-        <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- 选项卡 TabHost -->
+        <activity android:name=".biz.view.view_group.frame_layout.tab_host.TabHostActivity" />
+        <!-- ScrollView 最多包含一个组件，作用：为该组件添加垂直滚动条 -->
+        <activity android:name=".biz.view.view_group.frame_layout.scroll_view.ScrollViewActivity" />
+        <!-- notification 通知 -->
+        <activity android:name=".biz.notification.NotificationActivity" />
+        <!-- AlertDialog 创建对话框 -->
+        <activity android:name=".biz.alert_dialog.AlertDialogActivity" />
+        <!-- 对话框风格的窗口 -->
+        <activity
+            android:name=".biz.alert_dialog.DialogThemeActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <!-- popupWindow 使用 -->
+        <activity android:name=".biz.popup_window.PopupWindowActivity" />
     </application>
 
 </manifest>

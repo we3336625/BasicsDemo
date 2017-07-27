@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.zx.candroid"
+        applicationId "com.zx.android_view"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
