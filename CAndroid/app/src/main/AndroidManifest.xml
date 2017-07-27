@@ -70,6 +70,8 @@
         <activity android:name=".biz.view.view_group.frame_layout.scroll_view.ScrollViewActivity" />
         <!-- notification 通知 -->
         <activity android:name=".biz.notification.NotificationActivity" />
+        <!-- AlertDialog 创建对话框 -->
+        <activity android:name=".biz.alert_dialog.AlertDialogActivity" />
     </application>
 
 </manifest>
