@@ -72,6 +72,9 @@
         <activity android:name=".biz.notification.NotificationActivity" />
         <!-- AlertDialog 创建对话框 -->
         <activity android:name=".biz.alert_dialog.AlertDialogActivity" />
+        <!-- 对话框风格的窗口 -->
+        <activity android:name=".biz.alert_dialog.DialogThemeActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
     </application>
 
 </manifest>
