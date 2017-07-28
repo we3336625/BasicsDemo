@@ -1,4 +1,4 @@
-package com.zx.activitytest.Context;
+package com.zx.activitytest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
