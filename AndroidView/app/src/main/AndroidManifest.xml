@@ -41,7 +41,7 @@
         <!-- StackView 叠在一起的图片 -->
         <activity android:name=".biz.view.view_group.adapter_view.adapter_view_animator.stack_view.StackViewActivity" />
         <!-- progressBar 使用 -->
-        <activity android:name=".biz.view.progress_bar.progress_bar.ProgressBarActivity" />
+        <activity android:name=".biz.view.progress_bar.ProgressBarActivity" />
         <!-- seekBar  控制图片透明度 -->
         <activity android:name=".biz.view.progress_bar.abs_seek_bar.seek_bar.SeekBarActivity" />
         <!-- ViewSwitcher 实现仿android系统launcher界面 -->

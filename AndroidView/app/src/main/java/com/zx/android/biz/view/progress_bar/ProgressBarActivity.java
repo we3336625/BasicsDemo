@@ -1,4 +1,4 @@
-package com.zx.android.biz.view.progress_bar.progress_bar;
+package com.zx.android.biz.view.progress_bar;
 
 import android.os.Bundle;
 import android.os.Handler;

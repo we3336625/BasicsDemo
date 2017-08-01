@@ -1,6 +1,7 @@
 package com.zx.android.biz.view.view_group.frame_layout.tab_host;
 
 import android.os.Bundle;
+import android.widget.TabHost;
 
 import com.zx.android.R;
 import com.zx.android.biz.BaseActivity;
@@ -18,6 +19,7 @@ import com.zx.android.biz.BaseActivity;
  */
 public class TabHostActivity extends BaseActivity {
 
+    TabHost
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
