@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".biz.view.progress_bar.progress_bar.ProgressBarActivity">
+    tools:context=".biz.view.progress_bar.ProgressBarActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
