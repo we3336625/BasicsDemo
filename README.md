@@ -1,24 +1,5 @@
 BasicsDemo
 =======
-ActivityTest
-----------
-
-```Java
-	|--Context
-		|--ContextWrapper
-			|--ContextThemeWrapper
-				|--Activity
-					|--AccountAuthenticatorActivity
-					|--ActivityGroup	//Deprecated
-						|--TabActivity	//Deprecated
-					|--AliasActivity
-					|--ExpandableListActivity
-					|--FragmentActivity
-					|--ListActivity
-						|--LaucherActivity
-						|--PreferenceActivity
-						
-```
 
 
 AndroidView
@@ -234,10 +215,181 @@ AndroidView
 
 	|--ActionBar (活动条)
 	
+-------------------------------------------------
+
+	Handler
+		主要作用: 
+			1. 在新启动的线程中发送消息。
+			2. 在主线程中获取、处理消息。
+		
+		新启动的线程何时发送消息？主线程何时去获取并处理消息？
+			重写 Handler 类中处理消息的方法，当新启动的线程发送消息时，消息会发送到与之关联的 MessageQueue，
+			而 Handler 会不断的从 MessageQueue 中获取并处理消息————这将导致 Handler 中处理消息的方法被回调。
+			
+		Handler 包含如下方法用于发送、处理消息：
+			void handleMessage(Message msg): 处理消息的方式。该方法通常用于被重写。
+			final boolean hasMessages(int what): 检查消息队列中是否包含 what 属性为指定值的消息。
+			final boolean hasMessages(int what, Object object): 检查消息队列中是否包含 what 属性为指定值且 
+					object 属性为指定对象的消息。
+			多个重载的 final Message obtainMessage(): 获取消息。
+			final boolean sendEmptyMessage(int what): 发送空消息。
+			final boolean sendEmptyMessageDelayed(int what, long delayMillis): 指定多少毫秒之后发送空消息。
+			final boolean sendMessage(Message msg): 立即发送消息。
+			final boolean sendMessageDelayed(Message msg, long delayMillis): 指定多少毫秒之后发送消息。
+			
+		Handler、Loop、MessageQueue 的工作原理：
+			Message: Handler 接收和处理的消息对象。
+			Looper: 每个线程只能拥有一个Looper。它的 loop 方法负责读取 MessageQueue 中的消息，
+					读到信息之后就把消息交给发送该消息的 Handler 进行处理。
+			MessageQueue: 消息队列，它采用先进先出的方式来管理 Message。程序创建 Looper 对象时，
+					会在它的构造器中创建 MessageQueue 对象。由 Looper 负责管理。
+			Handler: 它能把消息发送给 Looper 管理的 MessageQueue，并负责处理 Looper 分给它的消息。
+				> 在主UI线程中，系统已经初始化了一个 Looper 对象，因此程序直接创建 Handler 即可，
+						然后就可通过 Handler 来发送消息、处理消息了。
+				> 在子线程中，必须自己创建一个 Looper 对象，并启动它。
+						创建 Looper 对象调用它的 prepare() 方法即可。
+			
+		在线程中使用 Handler 的步骤:
+			1. 调用 Looper 的 prepare() 方法为当前线程创建 Looper 对象，创建 Looper 对象时，
+					它的构造器会创建与之配套的 MessageQueue。
+			2. 有了 Looper 之后，创建 Handler 子类的实例，重写 handlerMessage() 方法，
+					该方法负责处理来自于其他线程的消息。
+			3. 调用 Looper 的 loop() 方法启动 Looper。
+			
+-------------------------------------------------
+
+	AsyncTask
+		为了解决新线程不能更新UI组件的问题，Andoird 提供了如下几种解决方案：
+			1. 使用 Handler 实现线程之间的通信。
+			2. Activity.runOnUiThread(Runnable)
+			3. View.post(Runnable)
+			4. View.postDelayed(Runnable, long)
+		
+		AsyncTask 更轻量级一些，适用于简单的异步处理，不需要借助线程和 Handler 即可实现。
+		AsyncTask<Params, Progress, Result> 是一个抽象类，通常用于被继承，继承 AsyncTask 时需要制定如下三个泛型：
+			> Params: 启动任务执行的 输入参数 的类型。
+			> Progress: 后台任务完成的 进度值 的类型。
+			> Result: 后台执行任务完成后 返回结果 的类型。
+		
+		使用 AsyncTask 只要如下三步：
+			1. 创建 AsyncTask 的子类，并为三个泛型参数指定类型。如果某个泛型参数不需要指定类型，则可将它指定为Void。
+			2. 根据需要，实现 AsyncTask 如下方法：
+				> Result doInBackground(Params... params): 重写该方法就是后台线程将要完成的任务。
+						该方法可以调用 publishProgress(Progress... values) 方法更新任务的执行进度。
+				> void onProgressUpdate(Progress... values): 在 doInBackground() 方法中调用 publishProgress() 
+						方法更新任务的执行进度后，将会触发该方法。
+				> void onPreExecute(): 该方法将在执行后台耗时操作前被调用。通常该方法用于完成一些初始化的准备工作。
+				> void onPostExecute(Result result): 当 doInBackground() 完成后，系统会自动调用 onPostExecute() 
+						方法，并将 doInBackground() 方法的返回值传给该方法。
+	
+	
+	
 	
 ```
+
+
+ActivityTest
+----------
+
+```Java
+	|--Context
+		|--ContextWrapper
+			|--ContextThemeWrapper
+				|--Activity
+					|--AccountAuthenticatorActivity: 实现账户管理界面的 Activity
+					|--ActivityGroup	//Deprecated
+						|--TabActivity: 实现Tab界面的 Activity	//Deprecated
+					|--AliasActivity: 别名Activity的基类，启动其它 Activity 时结束自己
+					|--ExpandableListActivity: 实现可展开列表界面的Activity
+					|--FragmentActivity
+					|--ListActivity: 实现列表界面的 Activity
+						|--LaucherActivity: 实现Activity列表界面的 Activity，当单击列表项时，所对应的Activity被启动
+						|--PreferenceActivity: 实现程序参数设置，存储界面的 Activity
+						
+						
+		Activity 生命周期:
+			> onCreate(@Nullable Bundle savedInstanceState): 创建 Activity 时被回调。该方法只会被调用一次。
+			> onStart(): 启动 Activity 时被回调。
+			> onRestart(): 重新启动 Activity 时被回调。
+			> onResume(): 恢复 Activity 时被回调。在 onStart() 方法后一定会回调 onResume() 方法。
+			> onPause(): 暂停 Activity 时被回调。
+			> onStop(): 停止 Activity 时被回调。
+			> onDestroy(): 销毁 Activity 时被回调。该方法只会被调用一次。
+			
+		Activity 加载模式：
+			> standard: 标准模式，这是默认的加载模式。
+				每次通过这种模式来启动目标 Activity 时，Android 总会为目标 Activity 创建一个新的实例，并将该 Activity 
+			添加到当前 Task 栈中————这种模式不会启动新的 Task，新 Activity 将被添加到原有的 Task 中。
+			
+			> singleTop: Task 栈顶单列模式。
+				这种模式与 standard 模式基本相似，但有一点不同: 当将要启动的目标 Activity 已经位于 Task 栈顶时，系统不会
+			创建目标 Activity 的实例，而是直接复用已有的 Activity 实例。
+				如果将要启动的目标 Activity 没有位于 Task 栈顶，此时系统会重新创建目标 Activity 的实例，并将它加载到 
+			Task 栈顶————此时与 standard 模式完全相同。
+			
+			> singleTask: Task 内单列模式。
+				采用这种加载模式的 Activity 在同一个 Task 内只有一个实例，当系统采用 singleTask 启动目标 Activity 时，
+			可分为下面三种情况：
+					1> 如果将要启动的目标 Activity 不存在，系统将会创建目标 Activity 的实例，并将它加入 Task 栈顶。
+					2> 如果将要启动的目标 Activity 已经位于 Task 栈顶，此时与 singleTop 模式的行为相同。
+					3> 如果将要启动的目标 Activity 存在但没有位于 Task 栈顶，系统将会把所有位于该 Activity 上面的所有 
+				Activity 移除 Task 栈，从而使得目标 Activity 转入栈顶。
+					
+			> singleInstance: 全局单列模式。
+				在这种加载模式下，系统保证无论从哪个 Task 中启动目标 Activity，只会创建一个目标 Activity 实例，并会使用
+			一个全新的 Task 栈来加载该 Activity 实例。
+				当系统采用 singleInstance 模式启动目标 Activity 时，可分为如下两种情况：
+					1> 如果将要启动的目标 Activity 不存在，系统会先创建一个全新的 Task，在创建目标 Activity 的实例，
+				并将它加入新的 Task 栈顶。
+					2> 如果将要启动的目标 Activity 已经存在，无论它位于哪个应用程序中、位于哪个 Task 中，系统都会把
+				Activity 所在的 Task 转到前台，从而使该 Activity 显示出来。
+				
+				采用 singleInstance 模式加载 Activity 总是位于 Task 栈顶，且采用 singleInstance 模式加载的 
+			Activity 所在 Task 将只包含该 Activity。
+			
+			
+			
+						
+```
+
+
+
 FragmentTest
 ---------
+```
+	|--Fragment
+		|--DialogFragment: 对话框界面的 Fragment
+		|--ListFragment: 实现列表界面的 Fragment
+		|--PreferenceFragment: 选项设置界面的 Fragment
+		|--WebViewFragment: WebView 界面的 Fragment
+
+	与 Activity 类似的是，Fragment 也存在如下状态：
+		> 运行状态: 当前 Fragment 位于前台，用户可见，可以获得焦点。
+		> 暂停状态: 其他 Activity 为与前台，该 Fragment 依然可见，只是不能获得焦点。
+		> 停止状态: 该 Fragment 不可见，失去焦点。
+		> 销毁状态: 该 Fragment 被完全删除，或该 Fragment 所在的 Activity 被结束。
+	
+	生命周期:
+		> void onAttach(Activity activity): 当该 Fragment 被添加到 Activity 时被回调。 该方法只会被调用一次。
+		> void onCreate(@Nullable Bundle savedInstanceState): 创建 Fragment 时被回调。 该方法只会被调用一次。
+		> View onCreateView(LayoutInflater inflater, 
+						@Nullable ViewGroup container, 
+						Bundle savedInstanceState): 每次创建、绘制该 Fragment 的 View 组件时回调该方法，
+											Fragment 将会显示该方法返回的 View 组件。
+		> void onActivityCreated(@Nullable Bundle savedInstanceState): 当 Fragment 所在的 Activity 被启动完成
+											后回调该方法。
+		> void onStart(): 启动 Fragment 时被回调。
+		> void onResume(): 恢复 Fragment 时被回调，在 onStart() 方法后一定会回调 onResume() 方法。
+		> void onPause(): 暂定 Fragment 时被回调。
+		> void onStop(): 停止 Fragment 时被回调。
+		> void onDestroyView(): 销毁该 Fragment 所包含的 View 组件时调用。
+		> void onDestroy(): 销毁 Fragment 时被回调。 该方法只会被调用一次。
+		> void onDetach(): 将该 Fragment 从 Activity 中删除、替换完成时回调该方法，在 onDestroy() 方法后一定会
+											回调 onDetach() 方法。 该方法只会被调用一次。
+
+
+	
+```
 DB
 ---------
 
