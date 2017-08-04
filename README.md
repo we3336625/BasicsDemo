@@ -292,6 +292,9 @@ ActivityTest
 ----------
 
 ```Java
+
+-------------------------------------------------
+
 	|--Context
 		|--ContextWrapper
 			|--ContextThemeWrapper
@@ -357,6 +360,9 @@ ActivityTest
 FragmentTest
 ---------
 ```
+
+-------------------------------------------------
+
 	|--Fragment
 		|--DialogFragment: 对话框界面的 Fragment
 		|--ListFragment: 实现列表界面的 Fragment
@@ -386,7 +392,35 @@ FragmentTest
 		> void onDestroy(): 销毁 Fragment 时被回调。 该方法只会被调用一次。
 		> void onDetach(): 将该 Fragment 从 Activity 中删除、替换完成时回调该方法，在 onDestroy() 方法后一定会
 											回调 onDetach() 方法。 该方法只会被调用一次。
-
+		
+	将 Fragment 添加到 Activity 中有如下两种方法:
+		> 在布局文件中使用<fragment.../>元素添加 Fragment， <fragment.../>元素的 android:name 
+				属性指定 Fragment 的实现类。
+		> 在Java代码中通过 FragmentTransaction 对象的 add() 方法来添加 Fragment。
+		
+	Activity 的 getFragmentManager() 方法可返回 FragmentManager，FragmentManager 对象的 beginTransaction() 
+			方法即可开启并返回 FragmentTransaction 对象
+			
+	Fragment 与 Activity 交互:
+		> Fragment 获取它所在的 Activity: 调用 Fragment 的 getActivity() 方法即可返回它所在的 Activity。
+		> Activity 获取它包含的 Fragment: 调用 Activity 关联的 FragmentManager 的 findFragmentById(int id) 
+				或 findFragmentByTag(String tag) 方法即可获取指定的 Fragment。
+				
+	Fragment 与 Activity 传递数据:
+		> Activity 向 Fragment 传递数据: 在 Activity 中创建 Bundle 数据包，并调用 Fragment 的 
+				setArguments(Bundle bundle) 方法即可将 Bundle 数据包传给 Fragment。
+		> Fragment 向 Activity 传递数据或 Activity 需要在 Fragment 运行中进行实时通讯: 
+				在 Fragment 中定义一个内部回调接口， 再让包含该 Fragment 的 Activity 实现该回调接口，
+				这样 Fragment 即可调用该回调方法将数据传给 Activity。
+				
+	Activity 管理 Fragment 主要依靠 FragmentManager:
+		如果需要 添加、删除、替换 Fragment，则需要借助于 FragmentTransaction 对象，FragmentTransaction 代表 
+				Activity 对 Fragment 执行的多个改变。
+		可以通过 FragmentManager 来获取 FragmentTransaction。
+		每个 FragmentTransaction 可以包含多个对 Fragment 的修改，比如包含调用了多个 add()、remove()、replace() 
+				操作，最后调用 commit() 方法提交事务即可。
+		在调用 commit() 之前，也可以调用 addToBackStack() 将事务添加到Back 栈，该栈由 Activity 负责管理，这样
+				允许用户按 BACK 按键返回到前一个 Fragment 状态。
 
 	
 ```

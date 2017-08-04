@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zx.db.DictActivity">
+
+    <EditText
+        android:id="@+id/et_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="word" />
+
+    <EditText
+        android:id="@+id/et_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="detail" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="模糊查找" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查找" />
+
+    <EditText
+        android:id="@+id/et_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="模糊删除" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除" />
+
+    <EditText
+        android:id="@+id/et_old_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="old" />
+
+    <EditText
+        android:id="@+id/et_new_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="new" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更新" />
+
+</LinearLayout>
