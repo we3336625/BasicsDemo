@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zx.viewtest.view.ScrollTestView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.zx.viewtest.MainActivity">
+
+
+    <com.zx.viewtest.view.ViewTest
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000" />
+
+    <com.zx.viewtest.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="android" />
+
+    <com.zx.viewtest.view.TopBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#bbbbbb"
+        custom:leftBackground="#00ff00"
+        custom:leftText="left"
+        custom:leftTextColor="#000000"
+        custom:rightBackground="#00ff00"
+        custom:rightText="right"
+        custom:rightTextColor="#000000"
+        custom:titleText="title"
+        custom:titleTextColor="@color/colorAccent" />
+
+
+    <com.zx.viewtest.view.ArcView
+        android:id="@+id/arcView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <com.zx.viewtest.view.RectView
+        android:id="@+id/rectView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.zx.viewtest.view.ScrollTestView>
+
