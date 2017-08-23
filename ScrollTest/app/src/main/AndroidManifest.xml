@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * 乡邻小站
+  ~  *   *Copyright (c) 2017 XiangLin,Inc.All Rights Reserved.
+  ~  */
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zx.db">
+    package="com.zx.scrolltest">
 
     <application
         android:allowBackup="true"
@@ -9,23 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DictActivity"
-            android:configChanges="orientation|screenSize">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ResultActivity"
-            android:theme="@style/Base.Theme.AppCompat.Dialog" />
-
-        <provider
-            android:name=".provider.MyContentProvider"
-            android:authorities="com.zx.db"
-            android:exported="true"/>
     </application>
 
 </manifest>
